@@ -51,6 +51,6 @@ export function SubmissionComparison() {
         <span>노선표 크게 보기 <Icon name="external"/></span>
       </a>
     </figure>
-    <a className="method-action" href={fridayExample + '#/search'}>도림통학에서 같은 목적지 찾아보기 <Icon name="arrow"/></a>
+    <a className="method-action" href={fridayExample + '#/search'}>직접 검색해보기 <Icon name="arrow"/></a>
   </section>;
 }
