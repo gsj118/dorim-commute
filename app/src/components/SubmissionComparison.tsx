@@ -16,7 +16,7 @@ export function SubmissionComparison() {
   return <section className="submission-comparison" aria-labelledby="comparison-question">
     <header className="comparison-intro">
       <p>금요일 하교 · 도림캠퍼스 → 광주 서구 화정동</p>
-      <h1 id="comparison-question" tabIndex={-1}>유니버시아드 힐스테이트 2단지로 가려면<br/> 어디서 몇 시에 타야 할까요?</h1>
+      <h1 id="comparison-question" tabIndex={-1}>유니버시아드 힐스테이트 2단지로 가려면<br/> 어디서 몇 시에 어떤 버스를 타야 할까요?</h1>
     </header>
     <div className="comparison-methods">
       <article>
