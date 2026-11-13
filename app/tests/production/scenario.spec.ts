@@ -23,7 +23,11 @@ test('화정동 비교에서 공식 자료와 금요일 하교 두 경로를 연
   const pdf = await comparison.getByRole('link', { name: /전체 PDF 열기/ }).evaluate(link => (link as HTMLAnchorElement).href);
   expect((await (await page.request.get(pdf)).body()).subarray(0, 5).toString()).toBe('%PDF-');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
-  await comparison.getByRole('link', { name: '직접 검색해보기' }).click();
+  const searchLinks = comparison.getByRole('link', { name: '직접 검색해보기', exact: true });
+  await expect(searchLinks).toHaveCount(2);
+  const card = comparison.locator('.dorim-method');
+  await expect(card.getByRole('heading', { level: 2 })).toHaveText('내가 아는 장소로 내릴 곳 찾기');
+  await card.getByRole('link', { name: '직접 검색해보기', exact: true }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('내가 아는 장소로 내릴 곳 찾기');
   await expect(page.getByLabel('이용 요일')).toHaveValue('FRI');
   await expect(page.getByLabel('어디로 돌아가시나요?')).toHaveValue('유니버시아드 힐스테이트 2단지');

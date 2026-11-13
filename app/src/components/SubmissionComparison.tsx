@@ -11,6 +11,10 @@ export const exampleDestination = {
   coordinates: { latitude: 35.14640530365541, longitude: 126.87963166633668, crs: 'WGS84' as const },
 };
 
+function SearchExampleLink() {
+  return <a className="method-action" href={fridayExample + '#/search'}>직접 검색해보기 <Icon name="arrow"/></a>;
+}
+
 export function SubmissionComparison() {
   const tableHeading = useRef<HTMLHeadingElement>(null);
   return <section className="submission-comparison" aria-labelledby="comparison-question">
@@ -36,7 +40,7 @@ export function SubmissionComparison() {
         <h2>내가 아는 장소로 내릴 곳 찾기</h2>
         <p>단지를 선택하면 주변 하차 후보와 그곳을 지나는 편의 학교 승차 장소·출발 시각을 함께 볼 수 있어요.</p>
         <div className="method-actions">
-          <a className="method-action" href={fridayExample + '#/search'}>2단지로 직접 찾아보기 <Icon name="arrow"/></a>
+          <SearchExampleLink/>
           <a className="comparison-text-link" href={fridayExample + '&example=trip#/trip/tp-s25-from-songjeong-03/occ-tp-s25-from-songjeong-03-01'}>운행편 예시 바로 보기</a>
         </div>
       </article>
@@ -51,6 +55,6 @@ export function SubmissionComparison() {
         <span>노선표 크게 보기 <Icon name="external"/></span>
       </a>
     </figure>
-    <a className="method-action" href={fridayExample + '#/search'}>직접 검색해보기 <Icon name="arrow"/></a>
+    <SearchExampleLink/>
   </section>;
 }
