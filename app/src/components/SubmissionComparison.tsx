@@ -38,7 +38,7 @@ export function SubmissionComparison() {
       <article className="dorim-method">
         <p className="method-label"><Icon name="pin"/> 도림통학</p>
         <h2>내가 아는 장소로 내릴 곳 찾기</h2>
-        <p>단지를 선택하면 주변 하차 후보와 그곳을 지나는 편의 학교 승차 장소·출발 시각을 함께 볼 수 있어요.</p>
+        <p>가려는 장소를 검색해 근처에서 내릴 만한 정류장을 찾아보세요. 그 정류장을 지나는 버스가 학교 어디에서 몇 시에 출발하는지도 확인할 수 있어요.</p>
         <div className="method-actions">
           <SearchExampleLink/>
           <a className="comparison-text-link" href={fridayExample + '&example=trip#/trip/tp-s25-from-songjeong-03/occ-tp-s25-from-songjeong-03-01'}>운행편 예시 바로 보기</a>
