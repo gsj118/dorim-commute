@@ -1,0 +1,1974 @@
+{
+  "recordKind": "public-ui-marker-coordinate-observation",
+  "sourceId": "S51",
+  "reviewedOn": "2026-11-06",
+  "timezone": "Asia/Seoul",
+  "observedAt": "2026-11-06T04:50:25.411Z",
+  "browser": "isolated headless Chrome via existing @playwright/test; no user profile",
+  "sourceUrl": "https://mokpo.unibus.kr/#!/index",
+  "crs": "WGS84",
+  "crsEvidence": "https://apis.map.kakao.com/web/documentation/#LatLng",
+  "method": "Normal UI direction/line/stop map clicks. Read the selected public DOM Angular stop binding; observe the marker constructor position via transparent Proxy and public Marker.getPosition().getLat()/getLng(). Compare original binding, modal location, marker position, and visible marker label. No map-center, tile math, POI geocoding, protected API or credentials used.",
+  "limitations": [
+    "A: official map display point only; no field or roadside boarding/alighting verification",
+    "PDF-local trip ↔ web line association remains documented correspondence hypothesis based on full ordered stop names and first time/destination; not an official permanent ID crosswalk",
+    "Official UI date/version/current operation are not independently confirmed",
+    "No MNU Square boarding stop in web line 31; do not transfer line 1 campus-arrival point to school boarding"
+  ],
+  "trips": [
+    {
+      "lineId": 4,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-04",
+      "lineLabel": "송04_전남대정문_07:00",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=4",
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 954,
+          "webName": "전남대정문",
+          "memo": "전남대정문(07:00)",
+          "lat": 35.17172858,
+          "lng": 126.90446178,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17172858,
+            "longitude": 126.90446178
+          },
+          "markerObservation": {
+            "location": {
+              "title": "전남대정문",
+              "lat": 35.17172858,
+              "lng": 126.90446178
+            },
+            "markers": [
+              {
+                "latitude": 35.17172858,
+                "longitude": 126.90446178000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 1
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:26.375Z",
+          "screenshot": "line-4-stop-954.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 23,
+          "webName": "NC백화점 광주역점",
+          "memo": "NC백화점 광주역점",
+          "lat": 35.16132912,
+          "lng": 126.90731121,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16132912,
+            "longitude": 126.90731121
+          },
+          "markerObservation": {
+            "location": {
+              "title": "NC백화점 광주역점",
+              "lat": 35.16132912,
+              "lng": 126.90731121
+            },
+            "markers": [
+              {
+                "latitude": 35.16132912,
+                "longitude": 126.90731121000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:26.623Z",
+          "screenshot": "line-4-stop-23.png"
+        },
+        {
+          "index": 2,
+          "webStopId": 971,
+          "webName": "평화빌딩 앞",
+          "memo": "평화빌딩 앞",
+          "lat": 35.15230447,
+          "lng": 126.89644553,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15230447,
+            "longitude": 126.89644553
+          },
+          "markerObservation": {
+            "location": {
+              "title": "평화빌딩 앞",
+              "lat": 35.15230447,
+              "lng": 126.89644553
+            },
+            "markers": [
+              {
+                "latitude": 35.15230446999999,
+                "longitude": 126.89644553000001
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 5
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:26.838Z",
+          "screenshot": "line-4-stop-971.png"
+        },
+        {
+          "index": 3,
+          "webStopId": 37,
+          "webName": "서구청버스승강장",
+          "memo": "서구청 버스승강장",
+          "lat": 35.15153467,
+          "lng": 126.88976298,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15153467,
+            "longitude": 126.88976298
+          },
+          "markerObservation": {
+            "location": {
+              "title": "서구청버스승강장",
+              "lat": 35.15153467,
+              "lng": 126.88976298
+            },
+            "markers": [
+              {
+                "latitude": 35.15153467,
+                "longitude": 126.88976298000001
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 9
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:27.030Z",
+          "screenshot": "line-4-stop-37.png"
+        },
+        {
+          "index": 4,
+          "webStopId": 38,
+          "webName": "추선회관",
+          "memo": "추선회관",
+          "lat": 35.15285087,
+          "lng": 126.88048205,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15285087,
+            "longitude": 126.88048205
+          },
+          "markerObservation": {
+            "location": {
+              "title": "추선회관",
+              "lat": 35.15285087,
+              "lng": 126.88048205
+            },
+            "markers": [
+              {
+                "latitude": 35.15285087,
+                "longitude": 126.88048204999998
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 9
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:27.239Z",
+          "screenshot": "line-4-stop-38.png"
+        },
+        {
+          "index": 5,
+          "webStopId": 989,
+          "webName": "한마음신경정신과",
+          "memo": "한마음신경정신과",
+          "lat": 35.15107005,
+          "lng": 126.86087867,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15107005,
+            "longitude": 126.86087867
+          },
+          "markerObservation": {
+            "location": {
+              "title": "한마음신경정신과",
+              "lat": 35.15107005,
+              "lng": 126.86087867
+            },
+            "markers": [
+              {
+                "latitude": 35.15107005,
+                "longitude": 126.86087867
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 3
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:27.451Z",
+          "screenshot": "line-4-stop-989.png"
+        },
+        {
+          "index": 6,
+          "webStopId": 990,
+          "webName": "세정아울렛",
+          "memo": "세정아울렛",
+          "lat": 35.14643011,
+          "lng": 126.84761364,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14643011,
+            "longitude": 126.84761364
+          },
+          "markerObservation": {
+            "location": {
+              "title": "세정아울렛",
+              "lat": 35.14643011,
+              "lng": 126.84761364
+            },
+            "markers": [
+              {
+                "latitude": 35.14643010999999,
+                "longitude": 126.84761364000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 1
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:27.635Z",
+          "screenshot": "line-4-stop-990.png"
+        },
+        {
+          "index": 7,
+          "webStopId": 991,
+          "webName": "구송정파출소건너편할리매장옆승강장",
+          "memo": "구송정파출소건너편",
+          "lat": 35.14399075,
+          "lng": 126.80302712,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14399075,
+            "longitude": 126.80302712
+          },
+          "markerObservation": {
+            "location": {
+              "title": "구송정파출소건너편할리매장옆승강장",
+              "lat": 35.14399075,
+              "lng": 126.80302712
+            },
+            "markers": [
+              {
+                "latitude": 35.14399074999999,
+                "longitude": 126.80302712
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 8
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:27.966Z",
+          "screenshot": "line-4-stop-991.png"
+        },
+        {
+          "index": 8,
+          "webStopId": 42,
+          "webName": "송정역시외버스승강장",
+          "memo": "송정역 시외버스 승강장",
+          "lat": 35.13556617,
+          "lng": 126.79013286,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13556617,
+            "longitude": 126.79013286
+          },
+          "markerObservation": {
+            "location": {
+              "title": "송정역시외버스승강장",
+              "lat": 35.13556617,
+              "lng": 126.79013286
+            },
+            "markers": [
+              {
+                "latitude": 35.135566170000004,
+                "longitude": 126.79013285999999
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:28.293Z",
+          "screenshot": "line-4-stop-42.png"
+        },
+        {
+          "index": 9,
+          "webStopId": 1172,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91084547,
+          "lng": 126.43461689,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91084547,
+            "longitude": 126.43461689
+          },
+          "markerObservation": {
+            "location": {
+              "title": "도림캠퍼스",
+              "lat": 34.91084547,
+              "lng": 126.43461689
+            },
+            "markers": [
+              {
+                "latitude": 34.910845470000005,
+                "longitude": 126.43461688999999
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 13
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:28.785Z",
+          "screenshot": "line-4-stop-1172.png"
+        }
+      ]
+    },
+    {
+      "lineId": 6,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-05",
+      "lineLabel": "송05_일곡119안전센터_06:50",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=6",
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 992,
+          "webName": "일곡119안전센터",
+          "memo": "일곡119안전센터(06:50)",
+          "lat": 35.20628983,
+          "lng": 126.89748347,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.20628983,
+            "longitude": 126.89748347
+          },
+          "markerObservation": {
+            "location": {
+              "title": "일곡119안전센터",
+              "lat": 35.20628983,
+              "lng": 126.89748347
+            },
+            "markers": [
+              {
+                "latitude": 35.206289829999996,
+                "longitude": 126.89748347
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:29.380Z",
+          "screenshot": "line-6-stop-992.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 25,
+          "webName": "연제동 롯데칠성승강장",
+          "memo": "연제동 롯데칠성 승강장",
+          "lat": 35.19784995,
+          "lng": 126.87931534,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.19784995,
+            "longitude": 126.87931534
+          },
+          "markerObservation": {
+            "location": {
+              "title": "연제동 롯데칠성승강장",
+              "lat": 35.19784995,
+              "lng": 126.87931534
+            },
+            "markers": [
+              {
+                "latitude": 35.197849950000005,
+                "longitude": 126.87931534
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 3
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:29.778Z",
+          "screenshot": "line-6-stop-25.png"
+        },
+        {
+          "index": 2,
+          "webStopId": 52,
+          "webName": "용두주공승강장",
+          "memo": "용두주공 승강장",
+          "lat": 35.21277856,
+          "lng": 126.87055368,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.21277856,
+            "longitude": 126.87055368
+          },
+          "markerObservation": {
+            "location": {
+              "title": "용두주공승강장",
+              "lat": 35.21277856,
+              "lng": 126.87055368
+            },
+            "markers": [
+              {
+                "latitude": 35.21277856,
+                "longitude": 126.87055367999999
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 5
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:30.150Z",
+          "screenshot": "line-6-stop-52.png"
+        },
+        {
+          "index": 3,
+          "webStopId": 993,
+          "webName": "광주우편집중국승강장",
+          "memo": "광주우편집중국승강장",
+          "lat": 35.21796795,
+          "lng": 126.85084925,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.21796795,
+            "longitude": 126.85084925
+          },
+          "markerObservation": {
+            "location": {
+              "title": "광주우편집중국승강장",
+              "lat": 35.21796795,
+              "lng": 126.85084925
+            },
+            "markers": [
+              {
+                "latitude": 35.21796795,
+                "longitude": 126.85084924999998
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 6
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:30.600Z",
+          "screenshot": "line-6-stop-993.png"
+        },
+        {
+          "index": 4,
+          "webStopId": 53,
+          "webName": "첨단응암공원승강장",
+          "memo": "첨단응암공원승강장",
+          "lat": 35.21659233,
+          "lng": 126.83443443,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.21659233,
+            "longitude": 126.83443443
+          },
+          "markerObservation": {
+            "location": {
+              "title": "첨단응암공원승강장",
+              "lat": 35.21659233,
+              "lng": 126.83443443
+            },
+            "markers": [
+              {
+                "latitude": 35.216592330000005,
+                "longitude": 126.83443443
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 2
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:30.920Z",
+          "screenshot": "line-6-stop-53.png"
+        },
+        {
+          "index": 5,
+          "webStopId": 54,
+          "webName": "수완2차우미린Ⓐ승강장",
+          "memo": "수완2차우미린Ⓐ승강장",
+          "lat": 35.20043771,
+          "lng": 126.82010388,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.20043771,
+            "longitude": 126.82010388
+          },
+          "markerObservation": {
+            "location": {
+              "title": "수완2차우미린Ⓐ승강장",
+              "lat": 35.20043771,
+              "lng": 126.82010388
+            },
+            "markers": [
+              {
+                "latitude": 35.20043771000001,
+                "longitude": 126.82010388000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 7
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:31.329Z",
+          "screenshot": "line-6-stop-54.png"
+        },
+        {
+          "index": 6,
+          "webStopId": 55,
+          "webName": "현진에버빌Ⓐ승강장",
+          "memo": "현진에버빌Ⓐ승강장",
+          "lat": 35.19461453,
+          "lng": 126.82286181,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.19461453,
+            "longitude": 126.82286181
+          },
+          "markerObservation": {
+            "location": {
+              "title": "현진에버빌Ⓐ승강장",
+              "lat": 35.19461453,
+              "lng": 126.82286181
+            },
+            "markers": [
+              {
+                "latitude": 35.19461453,
+                "longitude": 126.82286181000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:31.662Z",
+          "screenshot": "line-6-stop-55.png"
+        },
+        {
+          "index": 7,
+          "webStopId": 57,
+          "webName": "어등산약국",
+          "memo": "어등산약국",
+          "lat": 35.17971325,
+          "lng": 126.81703993,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17971325,
+            "longitude": 126.81703993
+          },
+          "markerObservation": {
+            "location": {
+              "title": "어등산약국",
+              "lat": 35.17971325,
+              "lng": 126.81703993
+            },
+            "markers": [
+              {
+                "latitude": 35.17971325,
+                "longitude": 126.81703993
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:32.107Z",
+          "screenshot": "line-6-stop-57.png"
+        },
+        {
+          "index": 8,
+          "webStopId": 994,
+          "webName": "월곡동부영Ⓐ승강장",
+          "memo": "월곡동부영A",
+          "lat": 35.16764479,
+          "lng": 126.80874111,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16764479,
+            "longitude": 126.80874111
+          },
+          "markerObservation": {
+            "location": {
+              "title": "월곡동부영Ⓐ승강장",
+              "lat": 35.16764479,
+              "lng": 126.80874111
+            },
+            "markers": [
+              {
+                "latitude": 35.16764479,
+                "longitude": 126.80874111
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 5
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:32.503Z",
+          "screenshot": "line-6-stop-994.png"
+        },
+        {
+          "index": 9,
+          "webStopId": 1173,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "location": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:32.885Z",
+          "screenshot": "line-6-stop-1173.png"
+        }
+      ]
+    },
+    {
+      "lineId": 7,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-06",
+      "lineLabel": "송06_첨단응암공원승강장_07:10",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=7",
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 26,
+          "webName": "첨단응암공원승강장",
+          "memo": "첨단응암공원승강장(07:10)",
+          "lat": 35.2165157,
+          "lng": 126.83442086,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.2165157,
+            "longitude": 126.83442086
+          },
+          "markerObservation": {
+            "location": {
+              "title": "첨단응암공원승강장",
+              "lat": 35.2165157,
+              "lng": 126.83442086
+            },
+            "markers": [
+              {
+                "latitude": 35.2165157,
+                "longitude": 126.83442086
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:33.411Z",
+          "screenshot": "line-7-stop-26.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 62,
+          "webName": "수완2차우미린Ⓐ승강장",
+          "memo": "수완2차우미린Ⓐ승강장",
+          "lat": 35.20041528,
+          "lng": 126.82017805,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.20041528,
+            "longitude": 126.82017805
+          },
+          "markerObservation": {
+            "location": {
+              "title": "수완2차우미린Ⓐ승강장",
+              "lat": 35.20041528,
+              "lng": 126.82017805
+            },
+            "markers": [
+              {
+                "latitude": 35.20041528,
+                "longitude": 126.82017804999998
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 17
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:33.769Z",
+          "screenshot": "line-7-stop-62.png"
+        },
+        {
+          "index": 2,
+          "webStopId": 63,
+          "webName": "현진에버빌Ⓐ승강장",
+          "memo": "현진에버빌Ⓐ승강장",
+          "lat": 35.19460998,
+          "lng": 126.82283162,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.19460998,
+            "longitude": 126.82283162
+          },
+          "markerObservation": {
+            "location": {
+              "title": "현진에버빌Ⓐ승강장",
+              "lat": 35.19460998,
+              "lng": 126.82283162
+            },
+            "markers": [
+              {
+                "latitude": 35.19460998000001,
+                "longitude": 126.82283162
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:34.169Z",
+          "screenshot": "line-7-stop-63.png"
+        },
+        {
+          "index": 3,
+          "webStopId": 64,
+          "webName": "수완W여성병원",
+          "memo": "수완W여성병원",
+          "lat": 35.18961275,
+          "lng": 126.82336401,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.18961275,
+            "longitude": 126.82336401
+          },
+          "markerObservation": {
+            "location": {
+              "title": "수완W여성병원",
+              "lat": 35.18961275,
+              "lng": 126.82336401
+            },
+            "markers": [
+              {
+                "latitude": 35.18961275,
+                "longitude": 126.82336401
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 8
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:34.604Z",
+          "screenshot": "line-7-stop-64.png"
+        },
+        {
+          "index": 4,
+          "webStopId": 65,
+          "webName": "어등산약국",
+          "memo": "어등산약국",
+          "lat": 35.17970875,
+          "lng": 126.81704269,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17970875,
+            "longitude": 126.81704269
+          },
+          "markerObservation": {
+            "location": {
+              "title": "어등산약국",
+              "lat": 35.17970875,
+              "lng": 126.81704269
+            },
+            "markers": [
+              {
+                "latitude": 35.17970875,
+                "longitude": 126.81704269
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:35.000Z",
+          "screenshot": "line-7-stop-65.png"
+        },
+        {
+          "index": 5,
+          "webStopId": 995,
+          "webName": "월곡동부영Ⓐ승강장",
+          "memo": "월곡동부영A",
+          "lat": 35.16745095,
+          "lng": 126.80870864,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16745095,
+            "longitude": 126.80870864
+          },
+          "markerObservation": {
+            "location": {
+              "title": "월곡동부영Ⓐ승강장",
+              "lat": 35.16745095,
+              "lng": 126.80870864
+            },
+            "markers": [
+              {
+                "latitude": 35.167450949999996,
+                "longitude": 126.80870863999999
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:35.366Z",
+          "screenshot": "line-7-stop-995.png"
+        },
+        {
+          "index": 6,
+          "webStopId": 1174,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "location": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:35.773Z",
+          "screenshot": "line-7-stop-1174.png"
+        }
+      ]
+    },
+    {
+      "lineId": 11,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-10",
+      "lineLabel": "송10_용두주공_09:20",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=11",
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 1003,
+          "webName": "용두주공",
+          "memo": "용두주공(09:20)",
+          "lat": 35.21278529,
+          "lng": 126.87052346,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.21278529,
+            "longitude": 126.87052346
+          },
+          "markerObservation": {
+            "location": {
+              "title": "용두주공",
+              "lat": 35.21278529,
+              "lng": 126.87052346
+            },
+            "markers": [
+              {
+                "latitude": 35.21278528999999,
+                "longitude": 126.87052346000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:36.289Z",
+          "screenshot": "line-11-stop-1003.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 1004,
+          "webName": "광주우편집중국승강장",
+          "memo": "광주우편집중국",
+          "lat": 35.21795882,
+          "lng": 126.8507614,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.21795882,
+            "longitude": 126.8507614
+          },
+          "markerObservation": {
+            "location": {
+              "title": "광주우편집중국승강장",
+              "lat": 35.21795882,
+              "lng": 126.8507614
+            },
+            "markers": [
+              {
+                "latitude": 35.21795882,
+                "longitude": 126.8507614
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:36.675Z",
+          "screenshot": "line-11-stop-1004.png"
+        },
+        {
+          "index": 2,
+          "webStopId": 30,
+          "webName": "첨단응암공원승강장",
+          "memo": "첨단응암공원승강장",
+          "lat": 35.2165991,
+          "lng": 126.83444266,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.2165991,
+            "longitude": 126.83444266
+          },
+          "markerObservation": {
+            "location": {
+              "title": "첨단응암공원승강장",
+              "lat": 35.2165991,
+              "lng": 126.83444266
+            },
+            "markers": [
+              {
+                "latitude": 35.2165991,
+                "longitude": 126.83444265999998
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:37.020Z",
+          "screenshot": "line-11-stop-30.png"
+        },
+        {
+          "index": 3,
+          "webStopId": 85,
+          "webName": "수완2차우미린Ⓐ승강장",
+          "memo": "수완2차우미린Ⓐ승강장",
+          "lat": 35.2003815,
+          "lng": 126.82018911,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.2003815,
+            "longitude": 126.82018911
+          },
+          "markerObservation": {
+            "location": {
+              "title": "수완2차우미린Ⓐ승강장",
+              "lat": 35.2003815,
+              "lng": 126.82018911
+            },
+            "markers": [
+              {
+                "latitude": 35.2003815,
+                "longitude": 126.82018911
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:37.413Z",
+          "screenshot": "line-11-stop-85.png"
+        },
+        {
+          "index": 4,
+          "webStopId": 86,
+          "webName": "현진에버빌Ⓐ승강장",
+          "memo": "현진에버빌Ⓐ승강장",
+          "lat": 35.1946303,
+          "lng": 126.82285903,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.1946303,
+            "longitude": 126.82285903
+          },
+          "markerObservation": {
+            "location": {
+              "title": "현진에버빌Ⓐ승강장",
+              "lat": 35.1946303,
+              "lng": 126.82285903
+            },
+            "markers": [
+              {
+                "latitude": 35.1946303,
+                "longitude": 126.82285903000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:37.808Z",
+          "screenshot": "line-11-stop-86.png"
+        },
+        {
+          "index": 5,
+          "webStopId": 87,
+          "webName": "수완W여성병원",
+          "memo": "수완W여성병원",
+          "lat": 35.18924086,
+          "lng": 126.82330991,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.18924086,
+            "longitude": 126.82330991
+          },
+          "markerObservation": {
+            "location": {
+              "title": "수완W여성병원",
+              "lat": 35.18924086,
+              "lng": 126.82330991
+            },
+            "markers": [
+              {
+                "latitude": 35.18924086,
+                "longitude": 126.82330991
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:38.218Z",
+          "screenshot": "line-11-stop-87.png"
+        },
+        {
+          "index": 6,
+          "webStopId": 88,
+          "webName": "어등산약국",
+          "memo": "수완어등산약국",
+          "lat": 35.1796862,
+          "lng": 126.81703725,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.1796862,
+            "longitude": 126.81703725
+          },
+          "markerObservation": {
+            "location": {
+              "title": "어등산약국",
+              "lat": 35.1796862,
+              "lng": 126.81703725
+            },
+            "markers": [
+              {
+                "latitude": 35.1796862,
+                "longitude": 126.81703725000001
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:38.632Z",
+          "screenshot": "line-11-stop-88.png"
+        },
+        {
+          "index": 7,
+          "webStopId": 89,
+          "webName": "월곡동부영Ⓐ승강장",
+          "memo": "월곡동부영Ⓐ승강장",
+          "lat": 35.16749611,
+          "lng": 126.8087689,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16749611,
+            "longitude": 126.8087689
+          },
+          "markerObservation": {
+            "location": {
+              "title": "월곡동부영Ⓐ승강장",
+              "lat": 35.16749611,
+              "lng": 126.8087689
+            },
+            "markers": [
+              {
+                "latitude": 35.16749611000001,
+                "longitude": 126.80876889999999
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:39.035Z",
+          "screenshot": "line-11-stop-89.png"
+        },
+        {
+          "index": 8,
+          "webStopId": 90,
+          "webName": "광산중학교건너편승강장",
+          "memo": "광산중학교건너편승강장",
+          "lat": 35.15898548,
+          "lng": 126.80761992,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15898548,
+            "longitude": 126.80761992
+          },
+          "markerObservation": {
+            "location": {
+              "title": "광산중학교건너편승강장",
+              "lat": 35.15898548,
+              "lng": 126.80761992
+            },
+            "markers": [
+              {
+                "latitude": 35.15898548,
+                "longitude": 126.80761992
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 2
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:39.394Z",
+          "screenshot": "line-11-stop-90.png"
+        },
+        {
+          "index": 9,
+          "webStopId": 91,
+          "webName": "구송정파출소건너편할리매장옆승강장",
+          "memo": "(구)송정파출소 건너편 할리매장옆 승강장",
+          "lat": 35.14400684,
+          "lng": 126.80322186,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14400684,
+            "longitude": 126.80322186
+          },
+          "markerObservation": {
+            "location": {
+              "title": "구송정파출소건너편할리매장옆승강장",
+              "lat": 35.14400684,
+              "lng": 126.80322186
+            },
+            "markers": [
+              {
+                "latitude": 35.144006839999996,
+                "longitude": 126.80322186
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:39.787Z",
+          "screenshot": "line-11-stop-91.png"
+        },
+        {
+          "index": 10,
+          "webStopId": 92,
+          "webName": "송정역시외버스승강장",
+          "memo": "송정역시외버스승강장",
+          "lat": 35.13553005,
+          "lng": 126.79009181,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13553005,
+            "longitude": 126.79009181
+          },
+          "markerObservation": {
+            "location": {
+              "title": "송정역시외버스승강장",
+              "lat": 35.13553005,
+              "lng": 126.79009181
+            },
+            "markers": [
+              {
+                "latitude": 35.135530049999986,
+                "longitude": 126.79009181
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:40.148Z",
+          "screenshot": "line-11-stop-92.png"
+        },
+        {
+          "index": 11,
+          "webStopId": 1179,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "location": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 18
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:40.485Z",
+          "screenshot": "line-11-stop-1179.png"
+        }
+      ]
+    },
+    {
+      "lineId": 32,
+      "direction": "fromCampus",
+      "localTripId": "tp-s25-from-jinwol-04",
+      "lineLabel": "진24_일곡병원_17:30",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=32",
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 1061,
+          "webName": "고막원광목기사식당건너편",
+          "memo": "광목기사식당건너편",
+          "lat": 35.02984011,
+          "lng": 126.60691582,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02984011,
+            "longitude": 126.60691582
+          },
+          "markerObservation": {
+            "location": {
+              "title": "고막원광목기사식당건너편",
+              "lat": 35.02984011,
+              "lng": 126.60691582
+            },
+            "markers": [
+              {
+                "latitude": 35.02984011000001,
+                "longitude": 126.60691582
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 1
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:41.014Z",
+          "screenshot": "line-32-stop-1061.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 1062,
+          "webName": "다시공영버스터미널",
+          "memo": "다시공영버스터미널",
+          "lat": 35.02010412,
+          "lng": 126.63994823,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02010412,
+            "longitude": 126.63994823
+          },
+          "markerObservation": {
+            "location": {
+              "title": "다시공영버스터미널",
+              "lat": 35.02010412,
+              "lng": 126.63994823
+            },
+            "markers": [
+              {
+                "latitude": 35.02010412,
+                "longitude": 126.63994823000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:41.436Z",
+          "screenshot": "line-32-stop-1062.png"
+        },
+        {
+          "index": 2,
+          "webStopId": 238,
+          "webName": "빛가람동주민센터",
+          "memo": "빛가람동주민센터",
+          "lat": 35.02106368,
+          "lng": 126.78926715,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02106368,
+            "longitude": 126.78926715
+          },
+          "markerObservation": {
+            "location": {
+              "title": "빛가람동주민센터",
+              "lat": 35.02106368,
+              "lng": 126.78926715
+            },
+            "markers": [
+              {
+                "latitude": 35.02106367999999,
+                "longitude": 126.78926715
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:41.882Z",
+          "screenshot": "line-32-stop-238.png"
+        },
+        {
+          "index": 3,
+          "webStopId": 239,
+          "webName": "효천역",
+          "memo": "효천역",
+          "lat": 35.10329475,
+          "lng": 126.87907373,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.10329475,
+            "longitude": 126.87907373
+          },
+          "markerObservation": {
+            "location": {
+              "title": "효천역",
+              "lat": 35.10329475,
+              "lng": 126.87907373
+            },
+            "markers": [
+              {
+                "latitude": 35.10329475000001,
+                "longitude": 126.87907373000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:42.232Z",
+          "screenshot": "line-32-stop-239.png"
+        },
+        {
+          "index": 4,
+          "webStopId": 240,
+          "webName": "남광주농협 진월동지점",
+          "memo": "남광주농협진월동지점",
+          "lat": 35.11806347,
+          "lng": 126.89854029,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.11806347,
+            "longitude": 126.89854029
+          },
+          "markerObservation": {
+            "location": {
+              "title": "남광주농협 진월동지점",
+              "lat": 35.11806347,
+              "lng": 126.89854029
+            },
+            "markers": [
+              {
+                "latitude": 35.11806347,
+                "longitude": 126.89854029
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 2
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:42.544Z",
+          "screenshot": "line-32-stop-240.png"
+        },
+        {
+          "index": 5,
+          "webStopId": 241,
+          "webName": "백운광장",
+          "memo": "백운광장",
+          "lat": 35.13380889,
+          "lng": 126.90514523,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13380889,
+            "longitude": 126.90514523
+          },
+          "markerObservation": {
+            "location": {
+              "title": "백운광장",
+              "lat": 35.13380889,
+              "lng": 126.90514523
+            },
+            "markers": [
+              {
+                "latitude": 35.13380889,
+                "longitude": 126.90514523000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:42.949Z",
+          "screenshot": "line-32-stop-241.png"
+        },
+        {
+          "index": 6,
+          "webStopId": 242,
+          "webName": "독립로알뜰주유소건너편",
+          "memo": "광주대창주유소",
+          "lat": 35.14602133,
+          "lng": 126.90384712,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14602133,
+            "longitude": 126.90384712
+          },
+          "markerObservation": {
+            "location": {
+              "title": "독립로알뜰주유소건너편",
+              "lat": 35.14602133,
+              "lng": 126.90384712
+            },
+            "markers": [
+              {
+                "latitude": 35.14602133000001,
+                "longitude": 126.90384712
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 4
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:43.366Z",
+          "screenshot": "line-32-stop-242.png"
+        },
+        {
+          "index": 7,
+          "webStopId": 243,
+          "webName": "한미쇼핑",
+          "memo": "광주한미쇼핑",
+          "lat": 35.15278265,
+          "lng": 126.91759273,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15278265,
+            "longitude": 126.91759273
+          },
+          "markerObservation": {
+            "location": {
+              "title": "한미쇼핑",
+              "lat": 35.15278265,
+              "lng": 126.91759273
+            },
+            "markers": [
+              {
+                "latitude": 35.15278264999999,
+                "longitude": 126.91759273000001
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 3
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:43.769Z",
+          "screenshot": "line-32-stop-243.png"
+        },
+        {
+          "index": 8,
+          "webStopId": 244,
+          "webName": "구터미널",
+          "memo": "광주구터미널",
+          "lat": 35.15535795,
+          "lng": 126.91261731,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15535795,
+            "longitude": 126.91261731
+          },
+          "markerObservation": {
+            "location": {
+              "title": "구터미널",
+              "lat": 35.15535795,
+              "lng": 126.91261731
+            },
+            "markers": [
+              {
+                "latitude": 35.15535795,
+                "longitude": 126.91261731
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 11
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:44.170Z",
+          "screenshot": "line-32-stop-244.png"
+        },
+        {
+          "index": 9,
+          "webStopId": 245,
+          "webName": "한국화장품",
+          "memo": "광주한국화장품",
+          "lat": 35.16066749,
+          "lng": 126.91463009,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16066749,
+            "longitude": 126.91463009
+          },
+          "markerObservation": {
+            "location": {
+              "title": "한국화장품",
+              "lat": 35.16066749,
+              "lng": 126.91463009
+            },
+            "markers": [
+              {
+                "latitude": 35.16066749000001,
+                "longitude": 126.91463009
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 15
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:44.597Z",
+          "screenshot": "line-32-stop-245.png"
+        },
+        {
+          "index": 10,
+          "webStopId": 246,
+          "webName": "북구청",
+          "memo": "광주북구청",
+          "lat": 35.17390239,
+          "lng": 126.9124619,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17390239,
+            "longitude": 126.9124619
+          },
+          "markerObservation": {
+            "location": {
+              "title": "북구청",
+              "lat": 35.17390239,
+              "lng": 126.9124619
+            },
+            "markers": [
+              {
+                "latitude": 35.173902389999995,
+                "longitude": 126.91246190000001
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 6
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:44.962Z",
+          "screenshot": "line-32-stop-246.png"
+        },
+        {
+          "index": 11,
+          "webStopId": 247,
+          "webName": "한국전력공사",
+          "memo": "광주한국전력공사",
+          "lat": 35.18429087,
+          "lng": 126.90688442,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.18429087,
+            "longitude": 126.90688442
+          },
+          "markerObservation": {
+            "location": {
+              "title": "한국전력공사",
+              "lat": 35.18429087,
+              "lng": 126.90688442
+            },
+            "markers": [
+              {
+                "latitude": 35.18429087,
+                "longitude": 126.90688442
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 1
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:45.298Z",
+          "screenshot": "line-32-stop-247.png"
+        },
+        {
+          "index": 12,
+          "webStopId": 248,
+          "webName": "31사단정문",
+          "memo": "31사단",
+          "lat": 35.19465,
+          "lng": 126.90438829,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.19465,
+            "longitude": 126.90438829
+          },
+          "markerObservation": {
+            "location": {
+              "title": "31사단정문",
+              "lat": 35.19465,
+              "lng": 126.90438829
+            },
+            "markers": [
+              {
+                "latitude": 35.19465,
+                "longitude": 126.90438828999999
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 2
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:45.681Z",
+          "screenshot": "line-32-stop-248.png"
+        },
+        {
+          "index": 13,
+          "webStopId": 249,
+          "webName": "일곡병원",
+          "memo": "광주일곡병원",
+          "lat": 35.20257633,
+          "lng": 126.89755952,
+          "clickBinding": "$ctrl.showMap(stop.name,stop.lat,stop.lng)",
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.20257633,
+            "longitude": 126.89755952
+          },
+          "markerObservation": {
+            "location": {
+              "title": "일곡병원",
+              "lat": 35.20257633,
+              "lng": 126.89755952
+            },
+            "markers": [
+              {
+                "latitude": 35.20257633000001,
+                "longitude": 126.89755952000002
+              }
+            ],
+            "markerLabelVisible": true,
+            "mapTileImageCount": 21,
+            "showMapSource": "(o,l,f)=>{r.mapLocation={title:o,lat:l,lng:f},e.Ui.turnOn(\"stopMapModal\")}",
+            "showDaumMapSource": "()=>{if(e.s.viewType!==\"M\"&&(e.s.viewType=\"M\",!e.s.mapLoaded)){var t=document.getElementById(\"daumMap\"),n={center:new daum.maps.LatLng(e.loc.lat,e.loc.lng),level:3},r=new daum.maps.Map(t,n),o=new daum.maps.LatLng(e.loc.lat,e.loc.lng),l=new daum.maps.Marker({position:o});l.setMap(r);var f='<div style=\"padding:5px;\">'+e.loc.title+\"</div>\",x=new daum.maps.InfoWindow({content:f,removable:!1});x.open(r,l),e.s.mapLoaded=!0}}",
+            "loadedTileCount": 16
+          },
+          "locationCheck": "officialMarkerObserved",
+          "accuracyLevel": "A",
+          "observedAt": "2026-11-06T04:50:46.127Z",
+          "screenshot": "line-32-stop-249.png"
+        }
+      ]
+    }
+  ],
+  "complete": true
+}

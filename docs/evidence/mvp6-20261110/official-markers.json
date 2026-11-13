@@ -1,0 +1,3781 @@
+{
+  "sourceId": "S54",
+  "recordKind": "BROWSER-OBSERVED-public-official-map-markers",
+  "reviewedOn": "2026-11-10",
+  "observedAt": "2026-11-10T02:13:38.153Z",
+  "sourceUrl": "https://mokpo.unibus.kr/#!/index",
+  "crs": "WGS84",
+  "crsEvidence": "https://apis.map.kakao.com/web/documentation/#LatLng",
+  "method": "Click public direction/line/stop controls, read that visible stop DOM Angular binding, transparently observe constructed Marker.getPosition(). Compare binding, modal loc, marker coordinates and visible marker title. Do not use map center, geocoding, tile math, or reverse direction coordinates.",
+  "limitations": [
+    "Official map display point only; not actual roadside or current service verification.",
+    "PDF/UI association is a separately audited correspondence hypothesis, not official ID mapping.",
+    "School boarding coordinates remain null unless an actual school-boarding marker exists in the same homeward line.",
+    "No private profile, key, account data, network body, or full DOM retained."
+  ],
+  "inventories": {
+    "toCampus": [
+      {
+        "lineId": 1,
+        "label": "송01_염주체육관건너편육교_07:10"
+      },
+      {
+        "lineId": 2,
+        "label": "송02_금호지구_중흥Ⓐ_07:10"
+      },
+      {
+        "lineId": 3,
+        "label": "송03_시립장애인복지관_07:00"
+      },
+      {
+        "lineId": 4,
+        "label": "송04_전남대정문_07:00"
+      },
+      {
+        "lineId": 6,
+        "label": "송05_일곡119안전센터_06:50"
+      },
+      {
+        "lineId": 7,
+        "label": "송06_첨단응암공원승강장_07:10"
+      },
+      {
+        "lineId": 8,
+        "label": "송07_남부대정문_07:00"
+      },
+      {
+        "lineId": 9,
+        "label": "송08_월곡동부영Ⓐ승강장_07:15"
+      },
+      {
+        "lineId": 10,
+        "label": "송09_송정역시외버스승강장_07:30"
+      },
+      {
+        "lineId": 11,
+        "label": "송10_용두주공_09:20"
+      },
+      {
+        "lineId": 80,
+        "label": "송11_남부대정문_09:20"
+      },
+      {
+        "lineId": 12,
+        "label": "진01_문흥동샛터코아_06:50"
+      },
+      {
+        "lineId": 5,
+        "label": "진02_31사단정문삼거리_06:50"
+      },
+      {
+        "lineId": 13,
+        "label": "진03_지원2동주민센터_07:00"
+      },
+      {
+        "lineId": 14,
+        "label": "진04_LG전자베스트샵용봉_07:00"
+      },
+      {
+        "lineId": 15,
+        "label": "진05_풍암지구대주Ⓐ사거리_07:10"
+      },
+      {
+        "lineId": 16,
+        "label": "진06_동성고육교옆_07:30"
+      },
+      {
+        "lineId": 17,
+        "label": "진07_풍암지구대주Ⓐ사거리_09:10"
+      },
+      {
+        "lineId": 81,
+        "label": "진08_동성고육교옆_09:30"
+      }
+    ],
+    "fromCampus": [
+      {
+        "lineId": 31,
+        "label": "진23_문흥동샛터코아_17:30"
+      },
+      {
+        "lineId": 32,
+        "label": "진24_일곡병원_17:30"
+      }
+    ]
+  },
+  "trips": [
+    {
+      "lineId": 2,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-02",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "송02_금호지구_중흥Ⓐ_07:10",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=2",
+      "orderedWebNames": [
+        "금호지구 중흥Ⓐ 건너편승강장",
+        "구송정파출소건너편할리매장옆승강장",
+        "선운휴먼시아버스승강장",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 12,
+          "webName": "금호지구 중흥Ⓐ 건너편승강장",
+          "memo": "금호지구 중흥Ⓐ 건너편승강장(07:10)",
+          "lat": 35.13279817,
+          "lng": 126.86173266,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13279817,
+            "longitude": 126.86173266
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "금호지구 중흥Ⓐ 건너편승강장",
+              "lat": 35.13279817,
+              "lng": 126.86173266
+            },
+            "markers": [
+              {
+                "latitude": 35.13279817000001,
+                "longitude": 126.86173266
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:39.326Z",
+          "screenshot": "official-line-2-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 984,
+          "webName": "구송정파출소건너편할리매장옆승강장",
+          "memo": "구송정파출소건너편_할리스매장옆승강장",
+          "lat": 35.1440133,
+          "lng": 126.80303255,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.1440133,
+            "longitude": 126.80303255
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "구송정파출소건너편할리매장옆승강장",
+              "lat": 35.1440133,
+              "lng": 126.80303255
+            },
+            "markers": [
+              {
+                "latitude": 35.14401329999999,
+                "longitude": 126.80303255
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:39.577Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 14,
+          "webName": "선운휴먼시아버스승강장",
+          "memo": "선운휴먼시아 버스승강장",
+          "lat": 35.14860184,
+          "lng": 126.77859298,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14860184,
+            "longitude": 126.77859298
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "선운휴먼시아버스승강장",
+              "lat": 35.14860184,
+              "lng": 126.77859298
+            },
+            "markers": [
+              {
+                "latitude": 35.14860184,
+                "longitude": 126.77859298
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:39.681Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 1171,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088163,
+          "lng": 126.43463853,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088163,
+            "longitude": 126.43463853
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088163,
+              "lng": 126.43463853
+            },
+            "markers": [
+              {
+                "latitude": 34.91088163,
+                "longitude": 126.43463853000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:39.776Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 3,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-03",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "송03_시립장애인복지관_07:00",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=3",
+      "orderedWebNames": [
+        "시립장애인복지관육교",
+        "문화신협 운암지점",
+        "신세계백화점육교",
+        "추선회관",
+        "한마음신경정신과",
+        "세정아울렛버스승강장",
+        "구송정파출소건너편할리매장옆승강장",
+        "송정역시외버스승강장",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 15,
+          "webName": "시립장애인복지관육교",
+          "memo": "시립장애인복지관 육교(07:00)",
+          "lat": 35.18633138,
+          "lng": 126.86710697,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.18633138,
+            "longitude": 126.86710697
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "시립장애인복지관육교",
+              "lat": 35.18633138,
+              "lng": 126.86710697
+            },
+            "markers": [
+              {
+                "latitude": 35.18633138,
+                "longitude": 126.86710697
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:39.999Z",
+          "screenshot": "official-line-3-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 16,
+          "webName": "문화신협 운암지점",
+          "memo": "문화신협 운암지점",
+          "lat": 35.17809878,
+          "lng": 126.87684152,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17809878,
+            "longitude": 126.87684152
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "문화신협 운암지점",
+              "lat": 35.17809878,
+              "lng": 126.87684152
+            },
+            "markers": [
+              {
+                "latitude": 35.17809878,
+                "longitude": 126.87684152
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:40.259Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 17,
+          "webName": "신세계백화점육교",
+          "memo": "신세계백화점 육교",
+          "lat": 35.1600778,
+          "lng": 126.88307821,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.1600778,
+            "longitude": 126.88307821
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "신세계백화점육교",
+              "lat": 35.1600778,
+              "lng": 126.88307821
+            },
+            "markers": [
+              {
+                "latitude": 35.16007780000001,
+                "longitude": 126.88307821
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:40.345Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 985,
+          "webName": "추선회관",
+          "memo": "추선회관",
+          "lat": 35.15281484,
+          "lng": 126.88050679,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15281484,
+            "longitude": 126.88050679
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "추선회관",
+              "lat": 35.15281484,
+              "lng": 126.88050679
+            },
+            "markers": [
+              {
+                "latitude": 35.152814839999984,
+                "longitude": 126.88050679
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:40.447Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 986,
+          "webName": "한마음신경정신과",
+          "memo": "한마음신경정신과",
+          "lat": 35.15106326,
+          "lng": 126.86085673,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15106326,
+            "longitude": 126.86085673
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "한마음신경정신과",
+              "lat": 35.15106326,
+              "lng": 126.86085673
+            },
+            "markers": [
+              {
+                "latitude": 35.15106326,
+                "longitude": 126.86085673
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:40.521Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 987,
+          "webName": "세정아울렛버스승강장",
+          "memo": "세정아울렛버스승강장",
+          "lat": 35.14640753,
+          "lng": 126.84757527,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14640753,
+            "longitude": 126.84757527
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "세정아울렛버스승강장",
+              "lat": 35.14640753,
+              "lng": 126.84757527
+            },
+            "markers": [
+              {
+                "latitude": 35.14640752999999,
+                "longitude": 126.84757526999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:40.587Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 988,
+          "webName": "구송정파출소건너편할리매장옆승강장",
+          "memo": "구송정파출소건너편",
+          "lat": 35.14400884,
+          "lng": 126.80306548,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14400884,
+            "longitude": 126.80306548
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "구송정파출소건너편할리매장옆승강장",
+              "lat": 35.14400884,
+              "lng": 126.80306548
+            },
+            "markers": [
+              {
+                "latitude": 35.14400883999999,
+                "longitude": 126.80306548
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:40.653Z",
+          "screenshot": null
+        },
+        {
+          "index": 7,
+          "webStopId": 22,
+          "webName": "송정역시외버스승강장",
+          "memo": "송정역 시외버스 승강장",
+          "lat": 35.13551658,
+          "lng": 126.79012202,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13551658,
+            "longitude": 126.79012202
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "송정역시외버스승강장",
+              "lat": 35.13551658,
+              "lng": 126.79012202
+            },
+            "markers": [
+              {
+                "latitude": 35.135516579999994,
+                "longitude": 126.79012201999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:40.722Z",
+          "screenshot": null
+        },
+        {
+          "index": 8,
+          "webStopId": 1170,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91087261,
+          "lng": 126.43463859,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91087261,
+            "longitude": 126.43463859
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91087261,
+              "lng": 126.43463859
+            },
+            "markers": [
+              {
+                "latitude": 34.910872610000006,
+                "longitude": 126.43463859
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:40.802Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 8,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-07",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "송07_남부대정문_07:00",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=8",
+      "orderedWebNames": [
+        "남부대정문",
+        "신창동우체국",
+        "우미Ⓐ건너편_비아신협",
+        "운남주공1단지육교_KCC페인트",
+        "운남주공5단지육교_목련마을승강장",
+        "운남동 삼성아파트건너편승강장",
+        "월곡동부영Ⓐ승강장",
+        "구송정파출소건너편할리매장옆승강장",
+        "송정역시외버스승강장",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 27,
+          "webName": "남부대정문",
+          "memo": "남부대정문(07:00)",
+          "lat": 35.20679215,
+          "lng": 126.84270182,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.20679215,
+            "longitude": 126.84270182
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "남부대정문",
+              "lat": 35.20679215,
+              "lng": 126.84270182
+            },
+            "markers": [
+              {
+                "latitude": 35.20679215,
+                "longitude": 126.84270182000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.014Z",
+          "screenshot": "official-line-8-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 70,
+          "webName": "신창동우체국",
+          "memo": "신창동우체국",
+          "lat": 35.19118881,
+          "lng": 126.83689058,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.19118881,
+            "longitude": 126.83689058
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "신창동우체국",
+              "lat": 35.19118881,
+              "lng": 126.83689058
+            },
+            "markers": [
+              {
+                "latitude": 35.19118880999999,
+                "longitude": 126.83689058000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.282Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 71,
+          "webName": "우미Ⓐ건너편_비아신협",
+          "memo": "우미Ⓐ 건너편 비아신협",
+          "lat": 35.1852566,
+          "lng": 126.83593079,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.1852566,
+            "longitude": 126.83593079
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "우미Ⓐ건너편_비아신협",
+              "lat": 35.1852566,
+              "lng": 126.83593079
+            },
+            "markers": [
+              {
+                "latitude": 35.1852566,
+                "longitude": 126.83593078999999
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.355Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 72,
+          "webName": "운남주공1단지육교_KCC페인트",
+          "memo": "남주공1단지육교_KCC페인트",
+          "lat": 35.17909225,
+          "lng": 126.82687237,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17909225,
+            "longitude": 126.82687237
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "운남주공1단지육교_KCC페인트",
+              "lat": 35.17909225,
+              "lng": 126.82687237
+            },
+            "markers": [
+              {
+                "latitude": 35.17909225,
+                "longitude": 126.82687237
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.419Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 73,
+          "webName": "운남주공5단지육교_목련마을승강장",
+          "memo": "운남주공5단지육교_목련마을 승강장",
+          "lat": 35.17950693,
+          "lng": 126.82071539,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17950693,
+            "longitude": 126.82071539
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "운남주공5단지육교_목련마을승강장",
+              "lat": 35.17950693,
+              "lng": 126.82071539
+            },
+            "markers": [
+              {
+                "latitude": 35.179506929999995,
+                "longitude": 126.82071538999999
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.486Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 74,
+          "webName": "운남동 삼성아파트건너편승강장",
+          "memo": "운남동 삼성아파트 건너편승강장",
+          "lat": 35.17423782,
+          "lng": 126.81724156,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17423782,
+            "longitude": 126.81724156
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "운남동 삼성아파트건너편승강장",
+              "lat": 35.17423782,
+              "lng": 126.81724156
+            },
+            "markers": [
+              {
+                "latitude": 35.17423782000002,
+                "longitude": 126.81724156000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.555Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 999,
+          "webName": "월곡동부영Ⓐ승강장",
+          "memo": "월곡동부영Ⓐ승강장",
+          "lat": 35.16765835,
+          "lng": 126.80876303,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16765835,
+            "longitude": 126.80876303
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "월곡동부영Ⓐ승강장",
+              "lat": 35.16765835,
+              "lng": 126.80876303
+            },
+            "markers": [
+              {
+                "latitude": 35.16765835,
+                "longitude": 126.80876303
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.666Z",
+          "screenshot": null
+        },
+        {
+          "index": 7,
+          "webStopId": 1000,
+          "webName": "구송정파출소건너편할리매장옆승강장",
+          "memo": "구송정파출소건너편할리매장옆승강장",
+          "lat": 35.14402466,
+          "lng": 126.80309013,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14402466,
+            "longitude": 126.80309013
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "구송정파출소건너편할리매장옆승강장",
+              "lat": 35.14402466,
+              "lng": 126.80309013
+            },
+            "markers": [
+              {
+                "latitude": 35.144024659999985,
+                "longitude": 126.80309013000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.735Z",
+          "screenshot": null
+        },
+        {
+          "index": 8,
+          "webStopId": 1001,
+          "webName": "송정역시외버스승강장",
+          "memo": "송정역시외버스승강장",
+          "lat": 35.13561116,
+          "lng": 126.79008611,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13561116,
+            "longitude": 126.79008611
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "송정역시외버스승강장",
+              "lat": 35.13561116,
+              "lng": 126.79008611
+            },
+            "markers": [
+              {
+                "latitude": 35.135611159999996,
+                "longitude": 126.79008611
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.807Z",
+          "screenshot": null
+        },
+        {
+          "index": 9,
+          "webStopId": 1175,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:41.911Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 9,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-08",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "송08_월곡동부영Ⓐ승강장_07:15",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=9",
+      "orderedWebNames": [
+        "월곡동부영Ⓐ승강장",
+        "광산중학교건너편승강장",
+        "구송정파출소건너편할리매장옆승강장",
+        "송정역시외버스승강장",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 28,
+          "webName": "월곡동부영Ⓐ승강장",
+          "memo": "월곡동부영Ⓐ승강장(07:15)",
+          "lat": 35.16758625,
+          "lng": 126.80876595,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16758625,
+            "longitude": 126.80876595
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "월곡동부영Ⓐ승강장",
+              "lat": 35.16758625,
+              "lng": 126.80876595
+            },
+            "markers": [
+              {
+                "latitude": 35.16758624999999,
+                "longitude": 126.80876595000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:42.124Z",
+          "screenshot": "official-line-9-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 78,
+          "webName": "광산중학교건너편승강장",
+          "memo": "광산중학교건너편승강장",
+          "lat": 35.15896521,
+          "lng": 126.8076282,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15896521,
+            "longitude": 126.8076282
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "광산중학교건너편승강장",
+              "lat": 35.15896521,
+              "lng": 126.8076282
+            },
+            "markers": [
+              {
+                "latitude": 35.15896521,
+                "longitude": 126.80762820000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:42.359Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 79,
+          "webName": "구송정파출소건너편할리매장옆승강장",
+          "memo": "(구)송정파출소 건너편 할리매장옆 승강장",
+          "lat": 35.14405173,
+          "lng": 126.80311201,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14405173,
+            "longitude": 126.80311201
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "구송정파출소건너편할리매장옆승강장",
+              "lat": 35.14405173,
+              "lng": 126.80311201
+            },
+            "markers": [
+              {
+                "latitude": 35.14405173000001,
+                "longitude": 126.80311201
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:42.439Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 80,
+          "webName": "송정역시외버스승강장",
+          "memo": "송정역 시외버스 승강장",
+          "lat": 35.13525039,
+          "lng": 126.78995537,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13525039,
+            "longitude": 126.78995537
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "송정역시외버스승강장",
+              "lat": 35.13525039,
+              "lng": 126.78995537
+            },
+            "markers": [
+              {
+                "latitude": 35.13525039000001,
+                "longitude": 126.78995537
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:42.535Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 1176,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:42.606Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 10,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-09",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "송09_송정역시외버스승강장_07:30",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=10",
+      "orderedWebNames": [
+        "송정역시외버스승강장",
+        "에너지밸리캠퍼스(화, 수)",
+        "무안우체국",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 29,
+          "webName": "송정역시외버스승강장",
+          "memo": "송정역시외버스승강장(07:30)",
+          "lat": 35.13559772,
+          "lng": 126.79013004,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13559772,
+            "longitude": 126.79013004
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "송정역시외버스승강장",
+              "lat": 35.13559772,
+              "lng": 126.79013004
+            },
+            "markers": [
+              {
+                "latitude": 35.13559771999999,
+                "longitude": 126.79013003999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:42.830Z",
+          "screenshot": "official-line-10-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 81,
+          "webName": "에너지밸리캠퍼스(화, 수)",
+          "memo": "에너지밸리캠퍼스(화, 수)",
+          "lat": 34.9756347,
+          "lng": 126.68889139,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.9756347,
+            "longitude": 126.68889139
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "에너지밸리캠퍼스(화, 수)",
+              "lat": 34.9756347,
+              "lng": 126.68889139
+            },
+            "markers": [
+              {
+                "latitude": 34.9756347,
+                "longitude": 126.68889139
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.042Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 1076,
+          "webName": "무안우체국",
+          "memo": "무안우체국",
+          "lat": 34.9872229,
+          "lng": 126.47773778,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.9872229,
+            "longitude": 126.47773778
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "무안우체국",
+              "lat": 34.9872229,
+              "lng": 126.47773778
+            },
+            "markers": [
+              {
+                "latitude": 34.9872229,
+                "longitude": 126.47773778
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.119Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 1178,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.183Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 80,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-songjeong-11",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "송11_남부대정문_09:20",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=80",
+      "orderedWebNames": [
+        "남부대정문",
+        "신창동우체국",
+        "우미Ⓐ건너편_비아신협",
+        "운남주공1단지육교_KCC페인트",
+        "운남주공5단지육교_목련마을승강장",
+        "운남삼성아파트건너편승강장",
+        "월곡동부영Ⓐ승강장",
+        "송정역시외버스승강장",
+        "에너지밸리캠퍼스(화, 수)",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 1005,
+          "webName": "남부대정문",
+          "memo": "남부대정문(09:20)",
+          "lat": 35.20686646,
+          "lng": 126.84266049,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.20686646,
+            "longitude": 126.84266049
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "남부대정문",
+              "lat": 35.20686646,
+              "lng": 126.84266049
+            },
+            "markers": [
+              {
+                "latitude": 35.20686645999999,
+                "longitude": 126.84266049
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.384Z",
+          "screenshot": "official-line-80-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 1006,
+          "webName": "신창동우체국",
+          "memo": "신창동우체국",
+          "lat": 35.19097921,
+          "lng": 126.8368663,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.19097921,
+            "longitude": 126.8368663
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "신창동우체국",
+              "lat": 35.19097921,
+              "lng": 126.8368663
+            },
+            "markers": [
+              {
+                "latitude": 35.190979209999995,
+                "longitude": 126.83686629999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.570Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 1007,
+          "webName": "우미Ⓐ건너편_비아신협",
+          "memo": "우미Ⓐ건너편_비아신협",
+          "lat": 35.18525427,
+          "lng": 126.83587041,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.18525427,
+            "longitude": 126.83587041
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "우미Ⓐ건너편_비아신협",
+              "lat": 35.18525427,
+              "lng": 126.83587041
+            },
+            "markers": [
+              {
+                "latitude": 35.18525427,
+                "longitude": 126.83587040999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.635Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 1008,
+          "webName": "운남주공1단지육교_KCC페인트",
+          "memo": "운남주공1단지육교_KCC페인트",
+          "lat": 35.17913062,
+          "lng": 126.82691895,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17913062,
+            "longitude": 126.82691895
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "운남주공1단지육교_KCC페인트",
+              "lat": 35.17913062,
+              "lng": 126.82691895
+            },
+            "markers": [
+              {
+                "latitude": 35.17913062,
+                "longitude": 126.82691895
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.702Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 1009,
+          "webName": "운남주공5단지육교_목련마을승강장",
+          "memo": "운남주공5단지육교_목련마을승강장",
+          "lat": 35.179507,
+          "lng": 126.82076205,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.179507,
+            "longitude": 126.82076205
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "운남주공5단지육교_목련마을승강장",
+              "lat": 35.179507,
+              "lng": 126.82076205
+            },
+            "markers": [
+              {
+                "latitude": 35.179507,
+                "longitude": 126.82076205000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.772Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 1010,
+          "webName": "운남삼성아파트건너편승강장",
+          "memo": "운남삼성아파트건너편",
+          "lat": 35.17412953,
+          "lng": 126.81715673,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17412953,
+            "longitude": 126.81715673
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "운남삼성아파트건너편승강장",
+              "lat": 35.17412953,
+              "lng": 126.81715673
+            },
+            "markers": [
+              {
+                "latitude": 35.174129529999995,
+                "longitude": 126.81715673
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.855Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 1011,
+          "webName": "월곡동부영Ⓐ승강장",
+          "memo": "월곡동부영Ⓐ승강장",
+          "lat": 35.16765383,
+          "lng": 126.80875207,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16765383,
+            "longitude": 126.80875207
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "월곡동부영Ⓐ승강장",
+              "lat": 35.16765383,
+              "lng": 126.80875207
+            },
+            "markers": [
+              {
+                "latitude": 35.167653830000006,
+                "longitude": 126.80875206999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:43.934Z",
+          "screenshot": null
+        },
+        {
+          "index": 7,
+          "webStopId": 530,
+          "webName": "송정역시외버스승강장",
+          "memo": "송정역시외버스승강장",
+          "lat": 35.13549838,
+          "lng": 126.79002057,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13549838,
+            "longitude": 126.79002057
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "송정역시외버스승강장",
+              "lat": 35.13549838,
+              "lng": 126.79002057
+            },
+            "markers": [
+              {
+                "latitude": 35.135498379999994,
+                "longitude": 126.79002057000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:44.010Z",
+          "screenshot": null
+        },
+        {
+          "index": 8,
+          "webStopId": 972,
+          "webName": "에너지밸리캠퍼스(화, 수)",
+          "memo": "에너지밸리캠퍼스(화, 수)",
+          "lat": 34.97559411,
+          "lng": 126.68888059,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.97559411,
+            "longitude": 126.68888059
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "에너지밸리캠퍼스(화, 수)",
+              "lat": 34.97559411,
+              "lng": 126.68888059
+            },
+            "markers": [
+              {
+                "latitude": 34.97559411,
+                "longitude": 126.68888059
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:44.113Z",
+          "screenshot": null
+        },
+        {
+          "index": 9,
+          "webStopId": 1180,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:44.211Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 12,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-jinwol-01",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "진01_문흥동샛터코아_06:50",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=12",
+      "orderedWebNames": [
+        "문흥동샛터코아건너편_광주은행문흥지점",
+        "문화동홈플러스건너편",
+        "북부소방서우산119안전센터",
+        "계림동이마트",
+        "백림약국건너편",
+        "산수교회건너편승강장",
+        "조선대건너편",
+        "동성고육교옆",
+        "효천역승강장",
+        "호남원예고앞",
+        "천주교성당승강장",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 31,
+          "webName": "문흥동샛터코아건너편_광주은행문흥지점",
+          "memo": "문흥동샛터코아 건너편 광주은행 문흥지점(06:50)",
+          "lat": 35.18583982,
+          "lng": 126.92077134,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.18583982,
+            "longitude": 126.92077134
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "문흥동샛터코아건너편_광주은행문흥지점",
+              "lat": 35.18583982,
+              "lng": 126.92077134
+            },
+            "markers": [
+              {
+                "latitude": 35.18583982000001,
+                "longitude": 126.92077134000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:44.412Z",
+          "screenshot": "official-line-12-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 93,
+          "webName": "문화동홈플러스건너편",
+          "memo": "문화동홈플러스건너편",
+          "lat": 35.18005862,
+          "lng": 126.92969417,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.18005862,
+            "longitude": 126.92969417
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "문화동홈플러스건너편",
+              "lat": 35.18005862,
+              "lng": 126.92969417
+            },
+            "markers": [
+              {
+                "latitude": 35.180058620000004,
+                "longitude": 126.92969417000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:44.688Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 94,
+          "webName": "북부소방서우산119안전센터",
+          "memo": "북부소방서 우산119안전센터",
+          "lat": 35.17437564,
+          "lng": 126.92603801,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17437564,
+            "longitude": 126.92603801
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "북부소방서우산119안전센터",
+              "lat": 35.17437564,
+              "lng": 126.92603801
+            },
+            "markers": [
+              {
+                "latitude": 35.174375639999994,
+                "longitude": 126.92603801
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:44.769Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 95,
+          "webName": "계림동이마트",
+          "memo": "계림동E마트",
+          "lat": 35.16439631,
+          "lng": 126.92042718,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16439631,
+            "longitude": 126.92042718
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "계림동이마트",
+              "lat": 35.16439631,
+              "lng": 126.92042718
+            },
+            "markers": [
+              {
+                "latitude": 35.16439630999999,
+                "longitude": 126.92042718
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:44.837Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 96,
+          "webName": "백림약국건너편",
+          "memo": "백림약국건너편",
+          "lat": 35.16218407,
+          "lng": 126.92862842,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16218407,
+            "longitude": 126.92862842
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "백림약국건너편",
+              "lat": 35.16218407,
+              "lng": 126.92862842
+            },
+            "markers": [
+              {
+                "latitude": 35.16218407,
+                "longitude": 126.92862842
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:44.938Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 97,
+          "webName": "산수교회건너편승강장",
+          "memo": "산수교회건너편승강장",
+          "lat": 35.15549095,
+          "lng": 126.93163047,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15549095,
+            "longitude": 126.93163047
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "산수교회건너편승강장",
+              "lat": 35.15549095,
+              "lng": 126.93163047
+            },
+            "markers": [
+              {
+                "latitude": 35.15549095,
+                "longitude": 126.93163047
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:45.045Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 98,
+          "webName": "조선대건너편",
+          "memo": "조선대 건너편 우측10m지점_공대방향",
+          "lat": 35.14374927,
+          "lng": 126.92533325,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14374927,
+            "longitude": 126.92533325
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "조선대건너편",
+              "lat": 35.14374927,
+              "lng": 126.92533325
+            },
+            "markers": [
+              {
+                "latitude": 35.143749269999994,
+                "longitude": 126.92533325000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:45.141Z",
+          "screenshot": null
+        },
+        {
+          "index": 7,
+          "webStopId": 99,
+          "webName": "동성고육교옆",
+          "memo": "동성고앞 육교",
+          "lat": 35.11507672,
+          "lng": 126.89738669,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.11507672,
+            "longitude": 126.89738669
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "동성고육교옆",
+              "lat": 35.11507672,
+              "lng": 126.89738669
+            },
+            "markers": [
+              {
+                "latitude": 35.11507671999999,
+                "longitude": 126.89738669
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:45.218Z",
+          "screenshot": null
+        },
+        {
+          "index": 8,
+          "webStopId": 1037,
+          "webName": "효천역승강장",
+          "memo": "효천역승강장",
+          "lat": 35.10217851,
+          "lng": 126.87827472,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.10217851,
+            "longitude": 126.87827472
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "효천역승강장",
+              "lat": 35.10217851,
+              "lng": 126.87827472
+            },
+            "markers": [
+              {
+                "latitude": 35.10217851,
+                "longitude": 126.87827472
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:45.284Z",
+          "screenshot": null
+        },
+        {
+          "index": 9,
+          "webStopId": 1038,
+          "webName": "호남원예고앞",
+          "memo": "호남원예고 앞",
+          "lat": 35.03546062,
+          "lng": 126.75214213,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.03546062,
+            "longitude": 126.75214213
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "호남원예고앞",
+              "lat": 35.03546062,
+              "lng": 126.75214213
+            },
+            "markers": [
+              {
+                "latitude": 35.03546062000001,
+                "longitude": 126.75214213000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:45.360Z",
+          "screenshot": null
+        },
+        {
+          "index": 10,
+          "webStopId": 1039,
+          "webName": "천주교성당승강장",
+          "memo": "나주 천주교성당 승강장",
+          "lat": 35.0359672,
+          "lng": 126.71595372,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.0359672,
+            "longitude": 126.71595372
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "천주교성당승강장",
+              "lat": 35.0359672,
+              "lng": 126.71595372
+            },
+            "markers": [
+              {
+                "latitude": 35.03596720000001,
+                "longitude": 126.71595372
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:45.436Z",
+          "screenshot": null
+        },
+        {
+          "index": 11,
+          "webStopId": 1181,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:45.501Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 5,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-jinwol-02",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "진02_31사단정문삼거리_06:50",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=5",
+      "orderedWebNames": [
+        "31사단 정문삼거리",
+        "오치사거리_책돌이도서관승강장",
+        "북구청보건소_메가박스건너편평경민회관",
+        "광주중앙교회 건너편_국제열쇠",
+        "롯데백화점건너편_금호할인마트",
+        "독립로알뜰주유소",
+        "백운초정문",
+        "동성고육교옆",
+        "천주교성당승강장",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 43,
+          "webName": "31사단 정문삼거리",
+          "memo": "31사단 정문삼거리(06:50)",
+          "lat": 35.19441531,
+          "lng": 126.90396582,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.19441531,
+            "longitude": 126.90396582
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "31사단 정문삼거리",
+              "lat": 35.19441531,
+              "lng": 126.90396582
+            },
+            "markers": [
+              {
+                "latitude": 35.19441531,
+                "longitude": 126.90396582
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:45.676Z",
+          "screenshot": "official-line-5-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 44,
+          "webName": "오치사거리_책돌이도서관승강장",
+          "memo": "오치사거리 책돌이도서관승강장",
+          "lat": 35.18586466,
+          "lng": 126.90517261,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.18586466,
+            "longitude": 126.90517261
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "오치사거리_책돌이도서관승강장",
+              "lat": 35.18586466,
+              "lng": 126.90517261
+            },
+            "markers": [
+              {
+                "latitude": 35.18586466,
+                "longitude": 126.90517261
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:45.926Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 45,
+          "webName": "북구청보건소_메가박스건너편평경민회관",
+          "memo": "북구청보건소사거리_메가박스 건너편 경민회관",
+          "lat": 35.17282953,
+          "lng": 126.91211726,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17282953,
+            "longitude": 126.91211726
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "북구청보건소_메가박스건너편평경민회관",
+              "lat": 35.17282953,
+              "lng": 126.91211726
+            },
+            "markers": [
+              {
+                "latitude": 35.17282953,
+                "longitude": 126.91211726
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.006Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 46,
+          "webName": "광주중앙교회 건너편_국제열쇠",
+          "memo": "광주중앙교회 건너편_국제열쇠",
+          "lat": 35.15832753,
+          "lng": 126.91331273,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15832753,
+            "longitude": 126.91331273
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "광주중앙교회 건너편_국제열쇠",
+              "lat": 35.15832753,
+              "lng": 126.91331273
+            },
+            "markers": [
+              {
+                "latitude": 35.158327529999994,
+                "longitude": 126.91331273
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.085Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 47,
+          "webName": "롯데백화점건너편_금호할인마트",
+          "memo": "롯데백화점 건너편 금호할인마트",
+          "lat": 35.15488058,
+          "lng": 126.91123936,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15488058,
+            "longitude": 126.91123936
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "롯데백화점건너편_금호할인마트",
+              "lat": 35.15488058,
+              "lng": 126.91123936
+            },
+            "markers": [
+              {
+                "latitude": 35.154880580000004,
+                "longitude": 126.91123936
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.154Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 48,
+          "webName": "독립로알뜰주유소",
+          "memo": "독립로알뜰주유소",
+          "lat": 35.14616978,
+          "lng": 126.90350127,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14616978,
+            "longitude": 126.90350127
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "독립로알뜰주유소",
+              "lat": 35.14616978,
+              "lng": 126.90350127
+            },
+            "markers": [
+              {
+                "latitude": 35.146169779999994,
+                "longitude": 126.90350127
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.260Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 49,
+          "webName": "백운초정문",
+          "memo": "백운초정문",
+          "lat": 35.13794997,
+          "lng": 126.90146455,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13794997,
+            "longitude": 126.90146455
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "백운초정문",
+              "lat": 35.13794997,
+              "lng": 126.90146455
+            },
+            "markers": [
+              {
+                "latitude": 35.13794997,
+                "longitude": 126.90146455
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.335Z",
+          "screenshot": null
+        },
+        {
+          "index": 7,
+          "webStopId": 50,
+          "webName": "동성고육교옆",
+          "memo": "동성고앞육교",
+          "lat": 35.11495272,
+          "lng": 126.89731005,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.11495272,
+            "longitude": 126.89731005
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "동성고육교옆",
+              "lat": 35.11495272,
+              "lng": 126.89731005
+            },
+            "markers": [
+              {
+                "latitude": 35.11495272,
+                "longitude": 126.89731004999999
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.399Z",
+          "screenshot": null
+        },
+        {
+          "index": 8,
+          "webStopId": 1036,
+          "webName": "천주교성당승강장",
+          "memo": "나주 천주교성당 승강장",
+          "lat": 35.03598094,
+          "lng": 126.71604683,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.03598094,
+            "longitude": 126.71604683
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "천주교성당승강장",
+              "lat": 35.03598094,
+              "lng": 126.71604683
+            },
+            "markers": [
+              {
+                "latitude": 35.035980939999995,
+                "longitude": 126.71604682999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.466Z",
+          "screenshot": null
+        },
+        {
+          "index": 9,
+          "webStopId": 1182,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.533Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 13,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-jinwol-03",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "진03_지원2동주민센터_07:00",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=13",
+      "orderedWebNames": [
+        "지원2동주민센터(농협하나로마트)",
+        "삼익세라믹Ⓐ정문_남광주농협앞",
+        "학동시장버스승강장_부흥교회 앞",
+        "양림휴먼시아Ⓐ",
+        "빅스포앞",
+        "동성고육교옆",
+        "효천역승강장",
+        "남평 탑모텔",
+        "천주교성당 승강장",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 32,
+          "webName": "지원2동주민센터(농협하나로마트)",
+          "memo": "지원2동 주민센터 승강장 농협하나로마트(07:00)",
+          "lat": 35.12094049,
+          "lng": 126.933464,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.12094049,
+            "longitude": 126.933464
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "지원2동주민센터(농협하나로마트)",
+              "lat": 35.12094049,
+              "lng": 126.933464
+            },
+            "markers": [
+              {
+                "latitude": 35.12094049,
+                "longitude": 126.933464
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.740Z",
+          "screenshot": "official-line-13-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 101,
+          "webName": "삼익세라믹Ⓐ정문_남광주농협앞",
+          "memo": "삼익세라믹Ⓐ정문 남광주농협앞",
+          "lat": 35.13021115,
+          "lng": 126.92969315,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13021115,
+            "longitude": 126.92969315
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "삼익세라믹Ⓐ정문_남광주농협앞",
+              "lat": 35.13021115,
+              "lng": 126.92969315
+            },
+            "markers": [
+              {
+                "latitude": 35.13021115,
+                "longitude": 126.92969314999999
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:46.970Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 102,
+          "webName": "학동시장버스승강장_부흥교회 앞",
+          "memo": "학동시장 버스승강장 부흥교회앞",
+          "lat": 35.13706567,
+          "lng": 126.92533935,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13706567,
+            "longitude": 126.92533935
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "학동시장버스승강장_부흥교회 앞",
+              "lat": 35.13706567,
+              "lng": 126.92533935
+            },
+            "markers": [
+              {
+                "latitude": 35.137065670000005,
+                "longitude": 126.92533935
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:47.072Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 103,
+          "webName": "양림휴먼시아Ⓐ",
+          "memo": "양림휴먼시아",
+          "lat": 35.13539742,
+          "lng": 126.91728437,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13539742,
+            "longitude": 126.91728437
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "양림휴먼시아Ⓐ",
+              "lat": 35.13539742,
+              "lng": 126.91728437
+            },
+            "markers": [
+              {
+                "latitude": 35.135397420000004,
+                "longitude": 126.91728436999999
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:47.169Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 104,
+          "webName": "빅스포앞",
+          "memo": "빅스포앞",
+          "lat": 35.12591361,
+          "lng": 126.8976556,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.12591361,
+            "longitude": 126.8976556
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "빅스포앞",
+              "lat": 35.12591361,
+              "lng": 126.8976556
+            },
+            "markers": [
+              {
+                "latitude": 35.125913610000005,
+                "longitude": 126.8976556
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:47.255Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 105,
+          "webName": "동성고육교옆",
+          "memo": "동성고앞 육교",
+          "lat": 35.11510378,
+          "lng": 126.89740859,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.11510378,
+            "longitude": 126.89740859
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "동성고육교옆",
+              "lat": 35.11510378,
+              "lng": 126.89740859
+            },
+            "markers": [
+              {
+                "latitude": 35.11510377999999,
+                "longitude": 126.89740858999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:47.331Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 1040,
+          "webName": "효천역승강장",
+          "memo": "효천역승강장",
+          "lat": 35.10215595,
+          "lng": 126.87824459,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.10215595,
+            "longitude": 126.87824459
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "효천역승강장",
+              "lat": 35.10215595,
+              "lng": 126.87824459
+            },
+            "markers": [
+              {
+                "latitude": 35.10215595,
+                "longitude": 126.87824459
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:47.406Z",
+          "screenshot": null
+        },
+        {
+          "index": 7,
+          "webStopId": 1183,
+          "webName": "남평 탑모텔",
+          "memo": null,
+          "lat": 35.04717917,
+          "lng": 126.83790351,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.04717917,
+            "longitude": 126.83790351
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "남평 탑모텔",
+              "lat": 35.04717917,
+              "lng": 126.83790351
+            },
+            "markers": [
+              {
+                "latitude": 35.04717917,
+                "longitude": 126.83790351
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:47.491Z",
+          "screenshot": null
+        },
+        {
+          "index": 8,
+          "webStopId": 107,
+          "webName": "천주교성당 승강장",
+          "memo": "천주교성당 승강장",
+          "lat": 35.0360036,
+          "lng": 126.7160988,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.0360036,
+            "longitude": 126.7160988
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "천주교성당 승강장",
+              "lat": 35.0360036,
+              "lng": 126.7160988
+            },
+            "markers": [
+              {
+                "latitude": 35.0360036,
+                "longitude": 126.7160988
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:47.568Z",
+          "screenshot": null
+        },
+        {
+          "index": 9,
+          "webStopId": 1184,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:47.640Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 14,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-jinwol-04",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "진04_LG전자베스트샵용봉_07:00",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=14",
+      "orderedWebNames": [
+        "LG베스트샵 용봉점",
+        "서광주농협 동운지점",
+        "광천파출소 건너편",
+        "상공회의소",
+        "농협 월산동지점",
+        "광주은행 주월지점",
+        "빅스포앞",
+        "동성고육교옆",
+        "효천역승강장",
+        "천주교성당 승강장",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 33,
+          "webName": "LG베스트샵 용봉점",
+          "memo": "LG베스트샵 용봉점(07:00)",
+          "lat": 35.18128682,
+          "lng": 126.89812968,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.18128682,
+            "longitude": 126.89812968
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "LG베스트샵 용봉점",
+              "lat": 35.18128682,
+              "lng": 126.89812968
+            },
+            "markers": [
+              {
+                "latitude": 35.181286820000004,
+                "longitude": 126.89812968
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:47.844Z",
+          "screenshot": "official-line-14-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 108,
+          "webName": "서광주농협 동운지점",
+          "memo": "서광주농렵 동운지점",
+          "lat": 35.17283723,
+          "lng": 126.88861179,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.17283723,
+            "longitude": 126.88861179
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "서광주농협 동운지점",
+              "lat": 35.17283723,
+              "lng": 126.88861179
+            },
+            "markers": [
+              {
+                "latitude": 35.17283723,
+                "longitude": 126.88861179000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.023Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 109,
+          "webName": "광천파출소 건너편",
+          "memo": "광천파출소건너편 광주은행",
+          "lat": 35.16387509,
+          "lng": 126.88340207,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.16387509,
+            "longitude": 126.88340207
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "광천파출소 건너편",
+              "lat": 35.16387509,
+              "lng": 126.88340207
+            },
+            "markers": [
+              {
+                "latitude": 35.16387509,
+                "longitude": 126.88340207
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.111Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 110,
+          "webName": "상공회의소",
+          "memo": "상공회의소",
+          "lat": 35.15153314,
+          "lng": 126.8856777,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.15153314,
+            "longitude": 126.8856777
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "상공회의소",
+              "lat": 35.15153314,
+              "lng": 126.8856777
+            },
+            "markers": [
+              {
+                "latitude": 35.15153314,
+                "longitude": 126.8856777
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.211Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 111,
+          "webName": "농협 월산동지점",
+          "memo": "농협 월산동지점",
+          "lat": 35.14382409,
+          "lng": 126.89137936,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.14382409,
+            "longitude": 126.89137936
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "농협 월산동지점",
+              "lat": 35.14382409,
+              "lng": 126.89137936
+            },
+            "markers": [
+              {
+                "latitude": 35.14382409000002,
+                "longitude": 126.89137936000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.290Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 112,
+          "webName": "광주은행 주월지점",
+          "memo": "광주은행주월지점",
+          "lat": 35.13802873,
+          "lng": 126.89594515,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.13802873,
+            "longitude": 126.89594515
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "광주은행 주월지점",
+              "lat": 35.13802873,
+              "lng": 126.89594515
+            },
+            "markers": [
+              {
+                "latitude": 35.13802873000001,
+                "longitude": 126.89594515000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.367Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 113,
+          "webName": "빅스포앞",
+          "memo": "빅스포앞",
+          "lat": 35.12587079,
+          "lng": 126.89765017,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.12587079,
+            "longitude": 126.89765017
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "빅스포앞",
+              "lat": 35.12587079,
+              "lng": 126.89765017
+            },
+            "markers": [
+              {
+                "latitude": 35.12587078999999,
+                "longitude": 126.89765017
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.435Z",
+          "screenshot": null
+        },
+        {
+          "index": 7,
+          "webStopId": 114,
+          "webName": "동성고육교옆",
+          "memo": "동성고앞육교",
+          "lat": 35.11511279,
+          "lng": 126.89740584,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.11511279,
+            "longitude": 126.89740584
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "동성고육교옆",
+              "lat": 35.11511279,
+              "lng": 126.89740584
+            },
+            "markers": [
+              {
+                "latitude": 35.11511279,
+                "longitude": 126.89740584
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.502Z",
+          "screenshot": null
+        },
+        {
+          "index": 8,
+          "webStopId": 115,
+          "webName": "효천역승강장",
+          "memo": "효천역승강장",
+          "lat": 35.10227537,
+          "lng": 126.87823344,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.10227537,
+            "longitude": 126.87823344
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "효천역승강장",
+              "lat": 35.10227537,
+              "lng": 126.87823344
+            },
+            "markers": [
+              {
+                "latitude": 35.10227537000001,
+                "longitude": 126.87823344
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.608Z",
+          "screenshot": null
+        },
+        {
+          "index": 9,
+          "webStopId": 116,
+          "webName": "천주교성당 승강장",
+          "memo": "천주교성당 승강장",
+          "lat": 35.03599461,
+          "lng": 126.71610979,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.03599461,
+            "longitude": 126.71610979
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "천주교성당 승강장",
+              "lat": 35.03599461,
+              "lng": 126.71610979
+            },
+            "markers": [
+              {
+                "latitude": 35.035994609999996,
+                "longitude": 126.71610979
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.710Z",
+          "screenshot": null
+        },
+        {
+          "index": 10,
+          "webStopId": 1185,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.783Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 15,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-jinwol-05",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "진05_풍암지구대주Ⓐ사거리_07:10",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=15",
+      "orderedWebNames": [
+        "풍암지구대주A사거리(202동 앞)",
+        "빛가람동주민센터",
+        "에너지밸리캠퍼스(화, 수)",
+        "다시공영버스터미널",
+        "고막원광목기사식당",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 1041,
+          "webName": "풍암지구대주A사거리(202동 앞)",
+          "memo": "풍암지구대주Ⓐ사거리(07:10)",
+          "lat": 35.12632334,
+          "lng": 126.8755536,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.12632334,
+            "longitude": 126.8755536
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "풍암지구대주A사거리(202동 앞)",
+              "lat": 35.12632334,
+              "lng": 126.8755536
+            },
+            "markers": [
+              {
+                "latitude": 35.12632334,
+                "longitude": 126.8755536
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:48.965Z",
+          "screenshot": "official-line-15-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 1043,
+          "webName": "빛가람동주민센터",
+          "memo": "빛가람동주민센터",
+          "lat": 35.02135367,
+          "lng": 126.79016489,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02135367,
+            "longitude": 126.79016489
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "빛가람동주민센터",
+              "lat": 35.02135367,
+              "lng": 126.79016489
+            },
+            "markers": [
+              {
+                "latitude": 35.021353669999996,
+                "longitude": 126.79016489
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:49.210Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 1077,
+          "webName": "에너지밸리캠퍼스(화, 수)",
+          "memo": "에너지밸리캠퍼스(화, 수)",
+          "lat": 34.97557135,
+          "lng": 126.68879307,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.97557135,
+            "longitude": 126.68879307
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "에너지밸리캠퍼스(화, 수)",
+              "lat": 34.97557135,
+              "lng": 126.68879307
+            },
+            "markers": [
+              {
+                "latitude": 34.97557135,
+                "longitude": 126.68879307
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:49.281Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 1044,
+          "webName": "다시공영버스터미널",
+          "memo": "다시공영버스터미널",
+          "lat": 35.02043558,
+          "lng": 126.640018,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02043558,
+            "longitude": 126.640018
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "다시공영버스터미널",
+              "lat": 35.02043558,
+              "lng": 126.640018
+            },
+            "markers": [
+              {
+                "latitude": 35.02043557999999,
+                "longitude": 126.640018
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:49.356Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 1045,
+          "webName": "고막원광목기사식당",
+          "memo": "광목기사식당",
+          "lat": 35.0301018,
+          "lng": 126.60700771,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.0301018,
+            "longitude": 126.60700771
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "고막원광목기사식당",
+              "lat": 35.0301018,
+              "lng": 126.60700771
+            },
+            "markers": [
+              {
+                "latitude": 35.0301018,
+                "longitude": 126.60700771000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:49.453Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 1186,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:49.536Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 16,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-jinwol-06",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "진06_동성고육교옆_07:30",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=16",
+      "orderedWebNames": [
+        "동성고육교옆",
+        "효천역승강장",
+        "빛가람 행정복지센터",
+        "천주교성당승강장",
+        "다시 공영버스터미널",
+        "고막원광목기사식당",
+        "함평역건너편 GS LPG주유소",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 35,
+          "webName": "동성고육교옆",
+          "memo": "동성고육교옆(07:30)",
+          "lat": 35.11510602,
+          "lng": 126.89738939,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.11510602,
+            "longitude": 126.89738939
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "동성고육교옆",
+              "lat": 35.11510602,
+              "lng": 126.89738939
+            },
+            "markers": [
+              {
+                "latitude": 35.11510602,
+                "longitude": 126.89738939
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:49.776Z",
+          "screenshot": "official-line-16-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 1046,
+          "webName": "효천역승강장",
+          "memo": "효천역승강장",
+          "lat": 35.10222359,
+          "lng": 126.87828836,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.10222359,
+            "longitude": 126.87828836
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "효천역승강장",
+              "lat": 35.10222359,
+              "lng": 126.87828836
+            },
+            "markers": [
+              {
+                "latitude": 35.102223590000015,
+                "longitude": 126.87828836
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:49.965Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 1253,
+          "webName": "빛가람 행정복지센터",
+          "memo": null,
+          "lat": 35.02123681,
+          "lng": 126.79034598,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02123681,
+            "longitude": 126.79034598
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "빛가람 행정복지센터",
+              "lat": 35.02123681,
+              "lng": 126.79034598
+            },
+            "markers": [
+              {
+                "latitude": 35.021236809999984,
+                "longitude": 126.79034598
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.033Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 1079,
+          "webName": "천주교성당승강장",
+          "memo": "나주 천주교성당 승강장",
+          "lat": 35.03599429,
+          "lng": 126.71597555,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.03599429,
+            "longitude": 126.71597555
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "천주교성당승강장",
+              "lat": 35.03599429,
+              "lng": 126.71597555
+            },
+            "markers": [
+              {
+                "latitude": 35.03599429,
+                "longitude": 126.71597555000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.099Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 124,
+          "webName": "다시 공영버스터미널",
+          "memo": "다시 공영버스터미널",
+          "lat": 35.02039747,
+          "lng": 126.64008391,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02039747,
+            "longitude": 126.64008391
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "다시 공영버스터미널",
+              "lat": 35.02039747,
+              "lng": 126.64008391
+            },
+            "markers": [
+              {
+                "latitude": 35.02039746999999,
+                "longitude": 126.64008391
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.208Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 125,
+          "webName": "고막원광목기사식당",
+          "memo": "고막원 광목기사식당",
+          "lat": 35.03007933,
+          "lng": 126.607027,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.03007933,
+            "longitude": 126.607027
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "고막원광목기사식당",
+              "lat": 35.03007933,
+              "lng": 126.607027
+            },
+            "markers": [
+              {
+                "latitude": 35.03007933,
+                "longitude": 126.60702700000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.309Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 1187,
+          "webName": "함평역건너편 GS LPG주유소",
+          "memo": null,
+          "lat": 35.02385341,
+          "lng": 126.53743075,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02385341,
+            "longitude": 126.53743075
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "함평역건너편 GS LPG주유소",
+              "lat": 35.02385341,
+              "lng": 126.53743075
+            },
+            "markers": [
+              {
+                "latitude": 35.02385341,
+                "longitude": 126.53743074999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.412Z",
+          "screenshot": null
+        },
+        {
+          "index": 7,
+          "webStopId": 1188,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.486Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 17,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-jinwol-07",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "진07_풍암지구대주Ⓐ사거리_09:10",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=17",
+      "orderedWebNames": [
+        "풍암지구대주Ⓐ사거리(202동 앞)",
+        "빅스포앞",
+        "동성고육교옆",
+        "효천역승강장",
+        "남평 탑모텔",
+        "천주교성당 승강장",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 1050,
+          "webName": "풍암지구대주Ⓐ사거리(202동 앞)",
+          "memo": "풍암지구대주Ⓐ사거리(09:10)",
+          "lat": 35.12625342,
+          "lng": 126.87549611,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.12625342,
+            "longitude": 126.87549611
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "풍암지구대주Ⓐ사거리(202동 앞)",
+              "lat": 35.12625342,
+              "lng": 126.87549611
+            },
+            "markers": [
+              {
+                "latitude": 35.12625342,
+                "longitude": 126.87549610999999
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.650Z",
+          "screenshot": "official-line-17-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 1049,
+          "webName": "빅스포앞",
+          "memo": "빅스포앞",
+          "lat": 35.12582118,
+          "lng": 126.8976036,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.12582118,
+            "longitude": 126.8976036
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "빅스포앞",
+              "lat": 35.12582118,
+              "lng": 126.8976036
+            },
+            "markers": [
+              {
+                "latitude": 35.125821179999996,
+                "longitude": 126.8976036
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.849Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 36,
+          "webName": "동성고육교옆",
+          "memo": "동성고 육교옆",
+          "lat": 35.11511053,
+          "lng": 126.89739761,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.11511053,
+            "longitude": 126.89739761
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "동성고육교옆",
+              "lat": 35.11511053,
+              "lng": 126.89739761
+            },
+            "markers": [
+              {
+                "latitude": 35.11511053,
+                "longitude": 126.89739760999998
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.917Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 126,
+          "webName": "효천역승강장",
+          "memo": "효천역 승강장",
+          "lat": 35.10226183,
+          "lng": 126.87821701,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.10226183,
+            "longitude": 126.87821701
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "효천역승강장",
+              "lat": 35.10226183,
+              "lng": 126.87821701
+            },
+            "markers": [
+              {
+                "latitude": 35.10226183000001,
+                "longitude": 126.87821701000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:50.983Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 127,
+          "webName": "남평 탑모텔",
+          "memo": "남평 탐모텔",
+          "lat": 35.04698753,
+          "lng": 126.83783539,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.04698753,
+            "longitude": 126.83783539
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "남평 탑모텔",
+              "lat": 35.04698753,
+              "lng": 126.83783539
+            },
+            "markers": [
+              {
+                "latitude": 35.04698753000001,
+                "longitude": 126.83783539000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:51.052Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 128,
+          "webName": "천주교성당 승강장",
+          "memo": "천주교성당 승강장",
+          "lat": 35.03599912,
+          "lng": 126.71610978,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.03599912,
+            "longitude": 126.71610978
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "천주교성당 승강장",
+              "lat": 35.03599912,
+              "lng": 126.71610978
+            },
+            "markers": [
+              {
+                "latitude": 35.03599912,
+                "longitude": 126.71610978000001
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:51.137Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 1189,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:51.241Z",
+          "screenshot": null
+        }
+      ]
+    },
+    {
+      "lineId": 81,
+      "direction": "toCampus",
+      "localTripId": "tp-s25-to-jinwol-08",
+      "associationStatus": "requires-PDF-sequence-crosscheck",
+      "lineLabel": "진08_동성고육교옆_09:30",
+      "url": "https://mokpo.unibus.kr/#!/stop?lineId=81",
+      "orderedWebNames": [
+        "동성고육교옆",
+        "효천역승강장",
+        "빛가람동주민센터",
+        "에너지밸리캠퍼스(화, 수)",
+        "다시공영버스터미널",
+        "고막원광목기사식당",
+        "도림캠퍼스"
+      ],
+      "stops": [
+        {
+          "index": 0,
+          "webStopId": 531,
+          "webName": "동성고육교옆",
+          "memo": "동성고 육교옆(09:30)",
+          "lat": 35.1152052,
+          "lng": 126.89741943,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.1152052,
+            "longitude": 126.89741943
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "동성고육교옆",
+              "lat": 35.1152052,
+              "lng": 126.89741943
+            },
+            "markers": [
+              {
+                "latitude": 35.1152052,
+                "longitude": 126.89741942999999
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:51.459Z",
+          "screenshot": "official-line-81-first-marker.png"
+        },
+        {
+          "index": 1,
+          "webStopId": 1052,
+          "webName": "효천역승강장",
+          "memo": "효천역승강장",
+          "lat": 35.10219884,
+          "lng": 126.87831856,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.10219884,
+            "longitude": 126.87831856
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "효천역승강장",
+              "lat": 35.10219884,
+              "lng": 126.87831856
+            },
+            "markers": [
+              {
+                "latitude": 35.10219884,
+                "longitude": 126.87831856
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:51.673Z",
+          "screenshot": null
+        },
+        {
+          "index": 2,
+          "webStopId": 968,
+          "webName": "빛가람동주민센터",
+          "memo": "빛가람동주민센터",
+          "lat": 35.02133353,
+          "lng": 126.79024438,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02133353,
+            "longitude": 126.79024438
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "빛가람동주민센터",
+              "lat": 35.02133353,
+              "lng": 126.79024438
+            },
+            "markers": [
+              {
+                "latitude": 35.02133352999999,
+                "longitude": 126.79024438
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:51.780Z",
+          "screenshot": null
+        },
+        {
+          "index": 3,
+          "webStopId": 969,
+          "webName": "에너지밸리캠퍼스(화, 수)",
+          "memo": "에너지밸리캠퍼스(화, 수)",
+          "lat": 34.97560718,
+          "lng": 126.68870533,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.97560718,
+            "longitude": 126.68870533
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "에너지밸리캠퍼스(화, 수)",
+              "lat": 34.97560718,
+              "lng": 126.68870533
+            },
+            "markers": [
+              {
+                "latitude": 34.97560717999999,
+                "longitude": 126.68870533
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:51.857Z",
+          "screenshot": null
+        },
+        {
+          "index": 4,
+          "webStopId": 1053,
+          "webName": "다시공영버스터미널",
+          "memo": "다시공영버스터미널",
+          "lat": 35.02040415,
+          "lng": 126.64005923,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.02040415,
+            "longitude": 126.64005923
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "다시공영버스터미널",
+              "lat": 35.02040415,
+              "lng": 126.64005923
+            },
+            "markers": [
+              {
+                "latitude": 35.02040415,
+                "longitude": 126.64005923000002
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:51.931Z",
+          "screenshot": null
+        },
+        {
+          "index": 5,
+          "webStopId": 1054,
+          "webName": "고막원광목기사식당",
+          "memo": "고막원 광목기사식당",
+          "lat": 35.03009961,
+          "lng": 126.6070269,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 35.03009961,
+            "longitude": 126.6070269
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "고막원광목기사식당",
+              "lat": 35.03009961,
+              "lng": 126.6070269
+            },
+            "markers": [
+              {
+                "latitude": 35.03009961,
+                "longitude": 126.6070269
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:52.007Z",
+          "screenshot": null
+        },
+        {
+          "index": 6,
+          "webStopId": 1190,
+          "webName": "도림캠퍼스",
+          "memo": null,
+          "lat": 34.91088426,
+          "lng": 126.4346221,
+          "coordinates": {
+            "crs": "WGS84",
+            "latitude": 34.91088426,
+            "longitude": 126.4346221
+          },
+          "markerObservation": {
+            "modal": {
+              "title": "도림캠퍼스",
+              "lat": 34.91088426,
+              "lng": 126.4346221
+            },
+            "markers": [
+              {
+                "latitude": 34.91088426,
+                "longitude": 126.4346221
+              }
+            ],
+            "markerLabelVisible": true
+          },
+          "locationCheck": "officialMarkerObserved",
+          "observedAt": "2026-11-10T02:13:52.109Z",
+          "screenshot": null
+        }
+      ]
+    }
+  ],
+  "complete": true,
+  "completedAt": "2026-11-10T02:13:52.154Z"
+}

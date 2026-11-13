@@ -1,0 +1,3099 @@
+{
+  "evidenceType": "SOURCE",
+  "reviewedOn": "2026-11-10",
+  "method": "S25 원본을 PyMuPDF로 새 추출·2배 렌더한 p.1/p.3 이미지를 직접 대조. 기존 전사/맥락문서는 위치 확인 보조.",
+  "sourcePath": "2026학년도 2학기 도림캠퍼스 통학버스 운행노선.pdf",
+  "sourceSha256": "b142398cc5bf43b497fb18f4129893d626860a12cb8e7e412ff1ede91abfc56b",
+  "sourceTitleRaw": "2026학년도 2학기 통학버스 노선표(안)",
+  "headings": {
+    "toCampus": "광주권 15개 노선 19편<월~목 운행 4편 포함>",
+    "fromCampus": "광주권 13개 노선 19편<월~목 운행 4편 포함>"
+  },
+  "countDefinitions": {
+    "documentRows": "p.1 광주권 표의 편별 행. 총38=19등교+19하교. p.3의 광주경유 반복행은 중복가산하지 않음.",
+    "documentStopRelationships": "각 등교행의 문서 지점+학교도착; 각 하교행의 경유지점+사용자확인 학교승차1. 고유 물리정류장수가 아님.",
+    "coordinateRelationships": "편별 관계에 실제 연결된 수치좌표. 같은 수치 중복을 고유위치수로 보고하지 않음."
+  },
+  "summary": {
+    "documentRows": 38,
+    "toCampusRows": 19,
+    "fromCampusRows": 19,
+    "previouslyIncludedRows": 8,
+    "missingRows": 30,
+    "documentNamedRelationships": 336,
+    "expectedRelationshipsIncludingUserConfirmedSchoolBoarding": 355,
+    "currentActualOperationVerifiedRows": 0
+  },
+  "crossPagePolicy": "p.3 광주경유 등교4행·하교2행은 대조용. 도림↔에너지 학교차량/목포/해남/신해양은 확장대상 아님.",
+  "footnotes": [
+    {
+      "locator": "p.1 등교표 하단",
+      "raw": "에너지밸리캠퍼스 환승 : 송정역시외버스승강장(07:30), 남부대정문(09:20) 동성고육교옆(07:30, 09:30)에서 화,수운행",
+      "caution": "진월⑤ 에너지07:50은 본문에 있으나 해당 각주에 미열거; 진월⑥ 본문에는 에너지 누락. 각주를 합성노선으로 변환 금지."
+    },
+    {
+      "locator": "p.3 하단",
+      "raw": "에너지밸리캠퍼스 및 신해양캠퍼스는 수업이 없는 경우, 운행이 불가하오니 양지하시기 바랍니다."
+    },
+    {
+      "locator": "p.3 하단",
+      "raw": "상기의 통학버스 노선 및 출발시간은 상황(날씨 및 탑승인원 등)에 따라 조정될 수 있음."
+    }
+  ],
+  "rows": [
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 1,
+      "displayName": "송정①",
+      "tripId": "tp-s25-to-songjeong-01",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정①",
+      "documentDeparture": "07:10",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "염주체육관건너편육교",
+          "documentTime": "07:10",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "서광주우체국건너편_CU편의점",
+          "documentTime": "07:14",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "구호남대_한마음신경정신과",
+          "documentTime": "07:18",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "세정아울렛버스승강장",
+          "documentTime": "07:21",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "구송정파출소건너편_할리매장옆승강장",
+          "documentTime": "07:27",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "송정역시외버스승강장",
+          "documentTime": "07:30",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": true,
+      "previousOccurrenceCount": 7,
+      "previousCoordinateRelationships": 7,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 2,
+      "displayName": "송정②",
+      "tripId": "tp-s25-to-songjeong-02",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정②",
+      "documentDeparture": "07:10",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "금호지구중흥Ⓐ건너편승강장",
+          "documentTime": "07:10",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "구송정파출소건너편_할리매장옆승강장",
+          "documentTime": "07:18",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "선운휴먼시아버스승강장",
+          "documentTime": "07:23",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 3,
+      "displayName": "송정③",
+      "tripId": "tp-s25-to-songjeong-03",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정③",
+      "documentDeparture": "07:00",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "시립장애인복지관육교",
+          "documentTime": "07:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "문화신협_운암지점",
+          "documentTime": "07:04",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "신세계백화점육교",
+          "documentTime": "07:08",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "추선회관",
+          "documentTime": "07:10",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "구호남대_한마음신경정신과",
+          "documentTime": "07:14",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "세정아울렛버스승강장",
+          "documentTime": "07:17",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "구송정파출소건너편_할리매장옆승강장",
+          "documentTime": "07:20",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "송정역시외버스승강장",
+          "documentTime": "07:24",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 4,
+      "displayName": "송정④",
+      "tripId": "tp-s25-to-songjeong-04",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정④",
+      "documentDeparture": "07:00",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "전남대정문",
+          "documentTime": "07:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "NC백화점_광주역점",
+          "documentTime": "07:06",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "평화빌딩앞",
+          "documentTime": "07:11",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "서구청버스승강장",
+          "documentTime": "07:13",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "추선회관",
+          "documentTime": "07:15",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "구호남대_한마음신경정신과",
+          "documentTime": "07:18",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "세정아울렛버스승강장",
+          "documentTime": "07:20",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "구송정파출소건너편_할리매장옆승강장",
+          "documentTime": "07:25",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "송정역시외버스승강장",
+          "documentTime": "07:30",
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": true,
+      "previousOccurrenceCount": 10,
+      "previousCoordinateRelationships": 10,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 5,
+      "displayName": "송정⑤",
+      "tripId": "tp-s25-to-songjeong-05",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정⑤",
+      "documentDeparture": "06:50",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "일곡119안전센터",
+          "documentTime": "06:50",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "연제동롯데칠성승강장",
+          "documentTime": "06:55",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "용두주공승강장",
+          "documentTime": "07:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "광주우편집중국승강장",
+          "documentTime": "07:03",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "첨단응암공원승강장",
+          "documentTime": "07:06",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "수완2차우미린Ⓐ승강장",
+          "documentTime": "07:09",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "현진에버빌Ⓐ승강장",
+          "documentTime": "07:10",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "어등산약국",
+          "documentTime": "07:13",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "월곡동부영Ⓐ승강장",
+          "documentTime": "07:17",
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": true,
+      "previousOccurrenceCount": 10,
+      "previousCoordinateRelationships": 10,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 6,
+      "displayName": "송정⑥",
+      "tripId": "tp-s25-to-songjeong-06",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정⑥",
+      "documentDeparture": "07:10",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "첨단응암공원승강장",
+          "documentTime": "07:10",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "수완2차우미린Ⓐ승강장",
+          "documentTime": "07:13",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "현진에버빌Ⓐ승강장",
+          "documentTime": "07:14",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "수완W여성병원",
+          "documentTime": "07:15",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "어등산약국",
+          "documentTime": "07:17",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "월곡동부영Ⓐ승강장",
+          "documentTime": "07:21",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": true,
+      "previousOccurrenceCount": 7,
+      "previousCoordinateRelationships": 7,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 7,
+      "displayName": "송정⑦",
+      "tripId": "tp-s25-to-songjeong-07",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정⑦",
+      "documentDeparture": "07:00",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "남부대정문",
+          "documentTime": "07:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "신창동우체국",
+          "documentTime": "07:05",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "우미Ⓐ건너편_비아신협",
+          "documentTime": "07:07",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "운남주공1단지육교_KCC페인트",
+          "documentTime": "07:09",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "운남주공5단지육교_목련마을승강장",
+          "documentTime": "07:10",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "운남동 삼성아파트건너편승강장",
+          "documentTime": "07:12",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "월곡동부영Ⓐ승강장",
+          "documentTime": "07:15",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "구송정파출소건너편_할리매장옆승강장",
+          "documentTime": "07:20",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "송정역시외버스승강장",
+          "documentTime": "07:25",
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 8,
+      "displayName": "송정⑧",
+      "tripId": "tp-s25-to-songjeong-08",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정⑧",
+      "documentDeparture": "07:15",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "월곡동부영Ⓐ승강장",
+          "documentTime": "07:15",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "광산중학교건너편승강장",
+          "documentTime": "07:16",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "구송정파출소건너편_할리매장옆승강장",
+          "documentTime": "07:20",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "송정역시외버스승강장",
+          "documentTime": "07:25",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 9,
+      "displayName": "송정⑨",
+      "tripId": "tp-s25-to-songjeong-09",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정⑨",
+      "documentDeparture": "07:30",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "송정역시외버스승강장",
+          "documentTime": "07:30",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "에너지밸리캠퍼스",
+          "documentTime": "08:00",
+          "rawCondition": "화,수운행"
+        },
+        {
+          "sequence": 3,
+          "name": "무안우체국",
+          "documentTime": "08:25",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": "에너지밸리",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [
+        "CF01"
+      ],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 10,
+      "displayName": "송정⑩",
+      "tripId": "tp-s25-to-songjeong-10",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정⑩",
+      "documentDeparture": "09:20",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "용두주공",
+          "documentTime": "09:20",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "광주우편집중국승강장",
+          "documentTime": "09:23",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "첨단응암공원승강장",
+          "documentTime": "09:28",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "수완2차우미린Ⓐ승강장",
+          "documentTime": "09:31",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "현진에버빌Ⓐ승강장",
+          "documentTime": "09:32",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "수완W여성병원",
+          "documentTime": "09:33",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "어등산약국",
+          "documentTime": "09:35",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "월곡동부영Ⓐ승강장",
+          "documentTime": "09:39",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "광산중학교건너편승강장",
+          "documentTime": "09:40",
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "구송정파출소건너편_할리매장옆승강장",
+          "documentTime": "09:43",
+          "rawCondition": null
+        },
+        {
+          "sequence": 11,
+          "name": "송정역시외버스승강장",
+          "documentTime": "09:48",
+          "rawCondition": null
+        },
+        {
+          "sequence": 12,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": "월~목운행",
+      "operatorNote": null,
+      "previouslyIncluded": true,
+      "previousOccurrenceCount": 12,
+      "previousCoordinateRelationships": 12,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "songjeong",
+      "number": 11,
+      "displayName": "송정⑪",
+      "tripId": "tp-s25-to-songjeong-11",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 송정⑪",
+      "documentDeparture": "09:20",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "남부대정문",
+          "documentTime": "09:20",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "신창동우체국",
+          "documentTime": "09:25",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "우미Ⓐ건너편_비아신협",
+          "documentTime": "09:27",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "운남주공1단지육교_KCC페인트",
+          "documentTime": "09:29",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "운남주공5단지육교_목련마을승강장",
+          "documentTime": "09:30",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "운남동_삼성아파트건너편승강장",
+          "documentTime": "09:32",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "월곡동부영Ⓐ승강장",
+          "documentTime": "09:35",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "송정역시외버스승강장",
+          "documentTime": "09:45",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "에너지밸리캠퍼스",
+          "documentTime": "10:15",
+          "rawCondition": "화,수운행"
+        },
+        {
+          "sequence": 10,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": "월~목운행 / 에너지밸리",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [
+        "p.3 에너지밸리 등교 광주방향 남부대정문⑪: 시각/경로 동일"
+      ],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "jinwol",
+      "number": 1,
+      "displayName": "진월①",
+      "tripId": "tp-s25-to-jinwol-01",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 진월①",
+      "documentDeparture": "06:50",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "문흥동샛터코아건너편_광주은행문흥지점",
+          "documentTime": "06:50",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "문화동홈플러스건너편",
+          "documentTime": "06:52",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "북부소방서우산119안전센터",
+          "documentTime": "06:54",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "계림동E마트",
+          "documentTime": "06:58",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "백림약국건너편",
+          "documentTime": "07:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "산수교회건너편승강장",
+          "documentTime": "07:02",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "조선대건너편우측10m지점_공대방향",
+          "documentTime": "07:07",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "동성고육교옆",
+          "documentTime": "07:20",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "효천역승강장",
+          "documentTime": "07:24",
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "호남원예고앞",
+          "documentTime": "07:35",
+          "rawCondition": null
+        },
+        {
+          "sequence": 11,
+          "name": "천주교성당승강장",
+          "documentTime": "07:38",
+          "rawCondition": null
+        },
+        {
+          "sequence": 12,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "jinwol",
+      "number": 2,
+      "displayName": "진월②",
+      "tripId": "tp-s25-to-jinwol-02",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 진월②",
+      "documentDeparture": "06:50",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "31사단정문삼거리",
+          "documentTime": "06:50",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "오치사거리_책돌이도서관승강장",
+          "documentTime": "06:52",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "북구청보건소사거리_메가박스건너편경민회관",
+          "documentTime": "06:55",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "광주중앙교회건너편_국제열쇠",
+          "documentTime": "07:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "롯데백화점건너편_금호할인마트",
+          "documentTime": "07:01",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "독립로알뜰주유소",
+          "documentTime": "07:03",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "백운초정문",
+          "documentTime": "07:05",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "동성고육교옆",
+          "documentTime": "07:15",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "천주교성당승강장",
+          "documentTime": "07:35",
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "jinwol",
+      "number": 3,
+      "displayName": "진월③",
+      "tripId": "tp-s25-to-jinwol-03",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 진월③",
+      "documentDeparture": "07:00",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "지원2동주민센터승강장_농협하나로마트",
+          "documentTime": "07:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "삼익세라믹Ⓐ정문_남광주농협앞",
+          "documentTime": "07:02",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "학동시장버스승강장_부흥교회앞",
+          "documentTime": "07:03",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "양림휴먼시아Ⓐ",
+          "documentTime": "07:06",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "빅스포앞",
+          "documentTime": "07:15",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "동성고육교옆",
+          "documentTime": "07:18",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "효천역승강장",
+          "documentTime": "07:20",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "남평 탑모텔",
+          "documentTime": "07:25",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "천주교성당승강장",
+          "documentTime": "07:35",
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "jinwol",
+      "number": 4,
+      "displayName": "진월④",
+      "tripId": "tp-s25-to-jinwol-04",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 진월④",
+      "documentDeparture": "07:00",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "LG전자베스트샵용봉점",
+          "documentTime": "07:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "서광주농협동운지점",
+          "documentTime": "07:03",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "광천파출소건너편",
+          "documentTime": "07:05",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "상공회의소",
+          "documentTime": "07:07",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "농협월산동지점",
+          "documentTime": "07:09",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "광주은행주월지점",
+          "documentTime": "07:10",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "빅스포앞",
+          "documentTime": "07:13",
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "동성고육교옆",
+          "documentTime": "07:16",
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "효천역승강장",
+          "documentTime": "07:18",
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "천주교성당승강장",
+          "documentTime": "07:33",
+          "rawCondition": null
+        },
+        {
+          "sequence": 11,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "jinwol",
+      "number": 5,
+      "displayName": "진월⑤",
+      "tripId": "tp-s25-to-jinwol-05",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 진월⑤",
+      "documentDeparture": "07:10",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "풍암지구대주Ⓐ사거리",
+          "documentTime": "07:10",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "빛가람동주민센터",
+          "documentTime": "07:37",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "에너지밸리캠퍼스",
+          "documentTime": "07:50",
+          "rawCondition": "화,수 운행"
+        },
+        {
+          "sequence": 4,
+          "name": "다시공영버스터미널",
+          "documentTime": "07:55",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "고막원광목기사식당",
+          "documentTime": "08:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": "에너지밸리",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "jinwol",
+      "number": 6,
+      "displayName": "진월⑥",
+      "tripId": "tp-s25-to-jinwol-06",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 진월⑥",
+      "documentDeparture": "07:30",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "동성고육교옆",
+          "documentTime": "07:30",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "효천역승강장",
+          "documentTime": "07:32",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "천주교성당승강장",
+          "documentTime": "07:47",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "다시공영버스터미널",
+          "documentTime": "07:55",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "고막원광목기사식당",
+          "documentTime": "08:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "함평역건너편 GS LPG주유소",
+          "documentTime": "08:05",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [
+        "CF02"
+      ],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "jinwol",
+      "number": 7,
+      "displayName": "진월⑦",
+      "tripId": "tp-s25-to-jinwol-07",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 진월⑦",
+      "documentDeparture": "09:10",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "풍암지구대주Ⓐ사거리",
+          "documentTime": "09:10",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "빅스포앞",
+          "documentTime": "09:16",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "동성고육교옆",
+          "documentTime": "09:20",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "효천역승강장",
+          "documentTime": "09:22",
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "남평 탑모텔",
+          "documentTime": "09:35",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "천주교성당승강장",
+          "documentTime": "09:50",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": "월~목운행",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "toCampus",
+      "family": "jinwol",
+      "number": 8,
+      "displayName": "진월⑧",
+      "tripId": "tp-s25-to-jinwol-08",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 등교 진월⑧",
+      "documentDeparture": "09:30",
+      "departureKind": "boardingAtFirstStop",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "동성고육교옆",
+          "documentTime": "09:30",
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "효천역승강장",
+          "documentTime": "09:32",
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "빛가람동주민센터",
+          "documentTime": "09:47",
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "에너지밸리캠퍼스",
+          "documentTime": "09:56",
+          "rawCondition": "화,수 운행"
+        },
+        {
+          "sequence": 5,
+          "name": "다시공영버스터미널",
+          "documentTime": "10:00",
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "고막원광목기사식당",
+          "documentTime": "10:03",
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "무안우체국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "도림캠퍼스",
+          "documentTime": null,
+          "rawCondition": null,
+          "role": "campusArrival"
+        }
+      ],
+      "rawNote": "월~목운행 / 에너지밸리",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "학교 도착시각"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [
+        "p.3 동성고⑧에는 효천역09:32와 무안우체국 미기재. 요약생략 여부 미확정. p.1 해당 두 관계는 거리후보/평가정답 보류 권장. 나머지 동일 시각은 유지 가능."
+      ],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 1,
+      "displayName": "송정①",
+      "tripId": "tp-s25-from-songjeong-01",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정①",
+      "documentDeparture": "15:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "송정역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "구송정파출소",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "광산중학교",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "월곡동부영Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "어등산약국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "수완W여성병원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "현진에버빌Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "수완2차우미린Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "첨단응암공원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "광주우편집중국승강장",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 11,
+          "name": "용두주공",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 12,
+          "name": "연제동롯데칠성",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 13,
+          "name": "일곡119안전센터",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "월~목운행",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 2,
+      "displayName": "송정②",
+      "tripId": "tp-s25-from-songjeong-02",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정②",
+      "documentDeparture": "16:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "에너지밸리캠퍼스",
+          "documentTime": "17:05",
+          "rawCondition": "화,수운행"
+        },
+        {
+          "sequence": 2,
+          "name": "송정역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "광산중학교",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "월곡동부영Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "어등산약국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "수완W여성병원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "첨단응암공원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "광주우편집중국승강장",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "용두주공",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "에너지밸리 / 화,수 운행",
+      "operatorNote": "운전원은 에너지밸리캠퍼스 탑승 인원을 감안하여 좌석 확보",
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [
+        "p.3 하교 광주방향 용두주공은 번호③/에너지출발17:05. p.1 송정②/학교출발16:30과 동일 경로인 대응가설. 공식 ID 동일성 확정 금지."
+      ],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 3,
+      "displayName": "송정③",
+      "tripId": "tp-s25-from-songjeong-03",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정③",
+      "documentDeparture": "17:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "서광주우체국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "염주체육관",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "금호지구중흥Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "풍암지구대주Ⓐ사거리",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "금요일 15:30 운행",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 4,
+      "displayName": "송정④",
+      "tripId": "tp-s25-from-songjeong-04",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정④",
+      "documentDeparture": "17:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "송정역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "구송정파출소",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "세정아울렛건너편",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "구호남대",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "추선회관",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "광진빌딩(양동초입구)",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "NC백화점광주역점",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "전남대정문",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "LG전자베스트샵용봉점",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "금요일 15:30 운행",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 5,
+      "displayName": "송정⑤",
+      "tripId": "tp-s25-from-songjeong-05",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정⑤",
+      "documentDeparture": "17:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "무안우체국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "삼성아파트",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "신가주공5단지",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "신가주공1단지",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "신가사거리",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "신창동우체국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "남부대",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "금요일 15:30 운행",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 6,
+      "displayName": "송정⑥",
+      "tripId": "tp-s25-from-songjeong-06",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정⑥",
+      "documentDeparture": "17:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "광산중학교",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "월곡동부영Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "어등산약국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "수완W여성병원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "현진에버빌Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "수완2차우미린Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "첨단응암공원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "광주우편집중국승강장",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "용두주공",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "금요일 15:30 운행",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 7,
+      "displayName": "송정⑦",
+      "tripId": "tp-s25-from-songjeong-07",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정⑦",
+      "documentDeparture": "18:20",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "서광주우체국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "염주체육관",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "금호지구중흥Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "풍암지구대주Ⓐ사거리",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 8,
+      "displayName": "송정⑧",
+      "tripId": "tp-s25-from-songjeong-08",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정⑧",
+      "documentDeparture": "18:20",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "광산중학교",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "월곡동부영Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "어등산약국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "수완W여성병원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "첨단응암공원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "광주우편집중국승강장",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "용두주공",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 9,
+      "displayName": "송정⑨",
+      "tripId": "tp-s25-from-songjeong-09",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정⑨",
+      "documentDeparture": "18:20",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "무안우체국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "삼성아파트",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "신가주공5단지",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "신가주공1단지",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "신가사거리",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "신창동우체국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "남부대",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 10,
+      "displayName": "송정⑩",
+      "tripId": "tp-s25-from-songjeong-10",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정⑩",
+      "documentDeparture": "18:20",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "송정역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "구송정파출소",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "세정아울렛건너편",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "구호남대",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "추선회관",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "광진빌딩(양동초입구)",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "NC백화점광주역점",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "전남대정문",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "LG전자베스트샵용봉점",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "songjeong",
+      "number": 11,
+      "displayName": "송정⑪",
+      "tripId": "tp-s25-from-songjeong-11",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 송정⑪",
+      "documentDeparture": "21:00",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "송정역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "구송정파출소",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "광산중학교",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "월곡동부영Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "어등산약국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "수완W여성병원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "첨단응암공원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "광주우편집중국승강장",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "용두주공",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "월~목운행 / (야간)",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "jinwol",
+      "number": 1,
+      "displayName": "진월①",
+      "tripId": "tp-s25-from-jinwol-01",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 진월①",
+      "documentDeparture": "15:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "천주교성당",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "탑 모텔",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "효천역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "남광주농협진월동지점",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "조선대",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "산수오거리",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "백림약국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "동신고",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "북광주전화국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "문흥동샛터코아",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "월~목운행",
+      "operatorNote": null,
+      "previouslyIncluded": true,
+      "previousOccurrenceCount": 11,
+      "previousCoordinateRelationships": 10,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "jinwol",
+      "number": 2,
+      "displayName": "진월②",
+      "tripId": "tp-s25-from-jinwol-02",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 진월②",
+      "documentDeparture": "16:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "에너지밸리캠퍼스",
+          "documentTime": "17:05",
+          "rawCondition": "화,수운행"
+        },
+        {
+          "sequence": 2,
+          "name": "천주교성당",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "호남원예고",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "빛가람동주민센터",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "효천역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "동성고육교",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "대광여고",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "신우아파트",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "상공회의소",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "신세계백화점",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 11,
+          "name": "광천파출소",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 12,
+          "name": "운암주공3단지Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 13,
+          "name": "동림센터",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "에너지밸리 / 화,수 운행",
+      "operatorNote": "운전원은 에너지밸리캠퍼스 탑승 인원을 감안하여 좌석 확보",
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [
+        "p.3 하교 광주방향 동림센타②/에너지출발17:05. p.1 학교출발16:30과 시각종류 구분. 센타/센터 원문 표기 혼재."
+      ],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "jinwol",
+      "number": 3,
+      "displayName": "진월③",
+      "tripId": "tp-s25-from-jinwol-03",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 진월③",
+      "documentDeparture": "17:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "천주교성당",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "탑 모텔",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "효천역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "남광주농협진월동지점",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "조선대",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "산수오거리",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "백림약국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "동신고",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "북광주전화국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "문흥동샛터코아",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "금요일 15:30 운행",
+      "operatorNote": null,
+      "previouslyIncluded": true,
+      "previousOccurrenceCount": 11,
+      "previousCoordinateRelationships": 10,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "jinwol",
+      "number": 4,
+      "displayName": "진월④",
+      "tripId": "tp-s25-from-jinwol-04",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 진월④",
+      "documentDeparture": "17:30",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "고막원 광목기사식당 건너편 횡단보도",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "다시공영버스터미널",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "빛가람동주민센터",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "효천역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "남광주농협진월동지점",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "백운광장",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "독립로알뜰주유소건너편",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "한미쇼핑",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "구터미널",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "한국화장품",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 11,
+          "name": "북구청",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 12,
+          "name": "한국전력공사",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 13,
+          "name": "31사단정문",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 14,
+          "name": "일곡병원",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "금요일 15:30 운행",
+      "operatorNote": null,
+      "previouslyIncluded": true,
+      "previousOccurrenceCount": 15,
+      "previousCoordinateRelationships": 14,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "jinwol",
+      "number": 5,
+      "displayName": "진월⑤",
+      "tripId": "tp-s25-from-jinwol-05",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 진월⑤",
+      "documentDeparture": "18:20",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "함평역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "천주교성당",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "지원동삼영예식장",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "삼익세라믹Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "학동시장",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "조선대",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "산수오거리",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "백림약국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "동신고",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "북광주전화국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 11,
+          "name": "문흥동샛터코아",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "jinwol",
+      "number": 6,
+      "displayName": "진월⑥",
+      "tripId": "tp-s25-from-jinwol-06",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 진월⑥",
+      "documentDeparture": "18:20",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "천주교성당",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "효천역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "남광주농협진월동지점",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "대광여고",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "백운광장",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "독립로알뜰주유소건너편",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "한미쇼핑",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "구터미널",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "한국화장품",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "북구청",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 11,
+          "name": "한국전력공사",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 12,
+          "name": "31사단정문",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 13,
+          "name": "일곡119안전센터",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "jinwol",
+      "number": 7,
+      "displayName": "진월⑦",
+      "tripId": "tp-s25-from-jinwol-07",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 진월⑦",
+      "documentDeparture": "18:20",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "고막원 광목기사식당 건너편 횡단보도",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "다시공영버스터미널",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "빛가람동주민센터",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "탑 모텔",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "신우Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "구동강한의원",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "상공회의소",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "신세계백화점",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 9,
+          "name": "광천파출소",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 10,
+          "name": "운암주공3단지Ⓐ",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 11,
+          "name": "동림센터",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": null,
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    },
+    {
+      "direction": "fromCampus",
+      "family": "jinwol",
+      "number": 8,
+      "displayName": "진월⑧",
+      "tripId": "tp-s25-from-jinwol-08",
+      "sourceId": "S25",
+      "locator": "p.1 광주권 하교 진월⑧",
+      "documentDeparture": "21:00",
+      "departureKind": "departureFromCampus",
+      "stops": [
+        {
+          "sequence": 1,
+          "name": "무안우체국",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 2,
+          "name": "고막원 광목기사식당 건너편 횡단보도",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 3,
+          "name": "다시공영버스터미널",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 4,
+          "name": "천주교성당",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 5,
+          "name": "빛가람동주민센터",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 6,
+          "name": "탑 모텔",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 7,
+          "name": "효천역",
+          "documentTime": null,
+          "rawCondition": null
+        },
+        {
+          "sequence": 8,
+          "name": "남광주농협진월동지점",
+          "documentTime": null,
+          "rawCondition": null
+        }
+      ],
+      "rawNote": "월~목운행 / (야간)",
+      "operatorNote": null,
+      "previouslyIncluded": false,
+      "previousOccurrenceCount": 0,
+      "previousCoordinateRelationships": 0,
+      "missingFields": [
+        "각 하차지점 도착시각",
+        "학교 승차 숫자좌표"
+      ],
+      "conflictIds": [],
+      "crossPageNotes": [],
+      "locationEvidence": "기존 수록 관계의 S50/S51 이외 신규 방향/편 좌표는 미확보. 같은 이름만으로 좌표 재사용 금지.",
+      "clearTranscriptionScope": "p.1 순서·명칭·표기 시각·비고. 충돌 범위는 원문 대안 보존 후 확정판정 제외.",
+      "weekdayPolicy": "명시 월~목/화·수만 기록. 공란을 월~금 확인으로 승격 금지. 하교 금요일15:30은 학교출발 대체. 에너지 지점 화·수 표기가 편 전체인지 지점만인지 근거 수준 구분."
+    }
+  ]
+}
