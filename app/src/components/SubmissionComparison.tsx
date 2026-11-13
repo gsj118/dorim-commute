@@ -33,7 +33,7 @@ export function SubmissionComparison() {
       </article>
       <article className="dorim-method">
         <p className="method-label"><Icon name="pin"/> 도림통학</p>
-        <h2>단지 이름으로 하차 후보 찾기</h2>
+        <h2>내가 아는 장소로 내릴 곳 찾기</h2>
         <p>단지를 선택하면 주변 하차 후보와 그곳을 지나는 편의 학교 승차 장소·출발 시각을 함께 볼 수 있어요.</p>
         <div className="method-actions">
           <a className="method-action" href={fridayExample + '#/search'}>2단지로 직접 찾아보기 <Icon name="arrow"/></a>
