@@ -28,7 +28,7 @@ test('As-is 두 방향 전체 수록 동일 자료와 시각 대체, 모드 왕�
   await expect(page.getByLabel('As-is 확인할 요일')).toHaveValue('FRI');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('진월③');
   await page.goBack();
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('아는 장소로 찾는');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('장소로 통학버스 찾기');
 });
 
 test('기준·평가 주요 화면 접근성·키보드·동일 뷰포트 캡처', async ({ page }, testInfo) => {
@@ -117,7 +117,7 @@ test('비교·평가 화면 지연로딩 실패에서 기본 탐색으로 복구
     await expect(page.getByRole('heading', { name: '화면을 불러오지 못했어요.', exact: true })).toBeVisible();
     await page.getByRole('link', { name: '기본 탐색으로 돌아가기', exact: true }).click();
     await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
-    await expect(page.getByRole('heading', { level: 1 })).toContainText('아는 장소로 찾는');
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('장소로 통학버스 찾기');
     await expect(page.getByRole('alert')).toHaveCount(0);
     await expect(page.locator('#place-query')).toBeVisible();
   }

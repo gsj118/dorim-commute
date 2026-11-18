@@ -1,14 +1,16 @@
+import { useUiCopy } from '../uiCopy';
 import type { RecommendationResult } from '../domain/recommend';
 import type { Direction } from '../domain/types';
 
 export function DirectionCoverage({ direction, result }: { direction: Direction; result: RecommendationResult }) {
+  const { copy } = useUiCopy();
   const { listedTrips, listedOccurrences } = result.coverage;
   const { direct, shared, anchor, discoverable, missing, withheld } = result.discoveryCoverage;
   const inbound = direction === 'toCampus';
   return <div className="direction-coverage">
     <details><summary>거리 비교에 쓴 위치 자료</summary>
       <p>{inbound ? '등교' : '하교'} 시간표 전체 <strong>{listedTrips}편</strong> 중
-      {' '}<strong>{discoverable.trips}편</strong>을 정류장 또는 주변 기준점으로 찾을 수 있어요.</p>
+      {' '}<strong>{discoverable.trips}편</strong>{copy('을 정류장 또는 주변 기준점으로 찾을 수 있어요.')}</p>
       <p>편별 {inbound ? '승차' : '하차'} 지점 {listedOccurrences}개 중 {discoverable.occurrences}개에 비교할 위치 자료가 있습니다.</p>
       <ul>
         <li>해당 편의 표시점 · {direct.trips}편, {direct.occurrences}개 지점</li>

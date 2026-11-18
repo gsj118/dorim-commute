@@ -1,3 +1,4 @@
+import { useUiCopy } from '../uiCopy';
 import { dataset, getTripStops, getTripTime } from '../data';
 import type { RouteSearchResult } from '../domain/routeSearch';
 import { getRouteStopContext } from '../domain/routeStopContext';
@@ -8,6 +9,7 @@ import { tripConditionSummary } from './TripConditions';
 type RouteStop = RouteSearchResult['matchedStops'][number];
 
 export function MatchedStop({ row, weekday, detail = false }: { row: RouteStop; weekday: Weekday | null; detail?: boolean }) {
+  const { copy } = useUiCopy();
   const { roleLabel, time, viaCondition, conflictNote, arrivalNotListed } = getRouteStopContext(dataset, row, weekday);
   const arrival = row.stop.role === 'alighting' || row.stop.role === 'campusArrival';
   return <span className="matched-stop">
@@ -18,7 +20,7 @@ export function MatchedStop({ row, weekday, detail = false }: { row: RouteStop; 
     </span>
     {time.value && row.stop.role === 'via' &&
       <small>{time.label}</small>}
-    {!time.value && !viaCondition && !conflictNote && <small>{detail && arrivalNotListed ? '도착 시각은 시간표에 없어요.' : arrival ? '도착 시각 미제공' : '시각 미제공'}</small>}
+    {!time.value && !viaCondition && !conflictNote && <small>{detail && arrivalNotListed ? copy('도착 시각은 시간표에 없어요.') : arrival ? '도착 시각 미제공' : '시각 미제공'}</small>}
     {viaCondition && <small>{viaCondition}</small>}
     {conflictNote && <strong className="list-conflict">{conflictNote}</strong>}
   </span>;

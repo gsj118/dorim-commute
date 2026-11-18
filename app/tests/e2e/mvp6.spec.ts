@@ -30,7 +30,7 @@ async function mockedSearch(page: Page) {
   await page.getByLabel('이용 요일').selectOption('MON');
   await page.getByRole('button', { name: '주소', exact: true }).click();
   await page.locator('#place-query').fill('광주광역시 북구 공개시설 · 합성 주소시험');
-  await page.getByRole('button', { name: '장소 검색', exact: true }).click();
+  await page.getByRole('button', { name: '주소 검색', exact: true }).click();
   await expect(page.locator('.place-results button')).toHaveCount(2);
 }
 
@@ -130,15 +130,15 @@ test('합성 주소결과 오선택·재선택과 월금16시·정렬·브라우
   // Friday 16:00 may have other newly transcribed routes. Never force a global
   // zero based on the old eight-trip sample; 23:59 is a separate empty case.
   await page.getByLabel('학교에서 출발할 수 있는 시각').fill('23:59');
-  await expect(page.getByText('현재 비교 가능한 거리 후보는 0개입니다.', { exact: true })).toBeVisible();
-  await expect(page.getByRole('link', { name: '시간 조건을 풀고 하교 전체 시간표 보기 →', exact: true })).toBeVisible();
+  await expect(page.getByText('거리 비교 결과 0곳', { exact: true })).toBeVisible();
+  await expect(page.getByRole('link', { name: '시간 조건 해제 후 하교 노선 전체 보기 →', exact: true })).toBeVisible();
   await page.screenshot({ path: `${out}/mvp6-${info.project.name}-time-empty.png`, fullPage: true });
-  await page.getByRole('button', { name: '시간 조건 지우고 다시 비교', exact: true }).click();
+  await page.getByRole('button', { name: '시간 조건 해제 후 다시 비교', exact: true }).click();
   await expect(page.locator('.candidate-card').first()).toBeVisible();
   await page.getByRole('button', { name: '장소 다시 선택', exact: true }).click();
   await page.locator('#place-query').fill('없는장소_합성시험');
-  await page.getByRole('button', { name: '장소 검색', exact: true }).click();
-  await expect(page.getByText('검색 결과가 없습니다.', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '주소 검색', exact: true }).click();
+  await expect(page.getByText('‘없는장소_합성시험’에 대한 주소 검색 결과가 없습니다.', { exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: '노선 목록에서 찾기', exact: true })).toBeVisible();
 });
 

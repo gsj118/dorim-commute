@@ -36,12 +36,12 @@ test('P029 unsupported region exposes actionable recovery in the empty result', 
     return route.fulfill({ contentType: 'application/javascript', body: `window.kakao={maps:{load:cb=>cb(),services:{Status:{OK:'OK',ZERO_RESULT:'ZERO_RESULT'},Places:class{keywordSearch(q,cb){cb([{id:'outside-test',place_name:'지원지역 밖 모의 장소',road_address_name:'경기 수원시 합성 시험 주소',address_name:'경기 수원시 합성 시험 주소',x:'127.05',y:'37.28'}],'OK',{hasNextPage:false})}}},LatLng:class{},Map:class{constructor(){throw Error('simulated map failure')}}}};` });
   });
   await page.goto('/');
-  await page.getByLabel('어디에서 출발하시나요?').fill('합성 시험');
+  await page.getByLabel('출발지 장소명').fill('합성 시험');
   await page.getByRole('button', { name: '장소 검색', exact: true }).click();
   await page.getByRole('button', { name: '다른 지역까지 검색' }).click();
   await page.getByRole('button', { name: /지원지역 밖 모의 장소/ }).click();
   const empty = page.locator('.selected-place .candidate-empty');
-  await expect(empty).toContainText('현재 거리 비교 지원지역 밖');
+  await expect(empty).toContainText('선택한 장소는 거리 비교 지원 지역 밖입니다.');
   await expect(empty).toContainText('장소의 이름·주소를 확인하고 다시 선택');
   await expect(empty).not.toContainText('반경 또는 시간조건을 바꿔보세요.');
   await empty.getByRole('link').click();

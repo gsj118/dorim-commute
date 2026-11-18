@@ -1,8 +1,10 @@
+import { useUiCopy } from '../uiCopy';
 import { useEffect, useRef, useState } from 'react';
 import { loadKakao, isKakaoConfigured } from '../providers/kakao';
 export interface MapPoint { id: string; lat: number; lng: number; label: string; number?: number; href?: string; isDistanceReference?: boolean; }
 const EMPTY: MapPoint[] = [];
 export function MapView({ coordinates, label, stops = EMPTY, selectedId, onSelect, centerIsReference = false, homeward = false, emptyMessage }: { coordinates: { lat: number; lng: number } | null; label: string; stops?: MapPoint[]; selectedId?: string | null; onSelect?: (id: string) => void; centerIsReference?: boolean; homeward?: boolean; emptyMessage?: string }) {
+  const { copy } = useUiCopy();
   const container = useRef<HTMLDivElement>(null);
   const [error, setError] = useState<string | null>(null);
   const [attempt, setAttempt] = useState(0);
@@ -52,12 +54,12 @@ export function MapView({ coordinates, label, stops = EMPTY, selectedId, onSelec
     }).catch(() => { if (!cancelled) setError('지도 연결에 실패했습니다. 위치 텍스트와 노선 목록은 계속 이용할 수 있습니다.'); });
     return () => { cancelled = true; cleanup?.(); };
   }, [coordinates?.lat, coordinates?.lng, label, signature, attempt, selectedId, centerIsReference]);
-  if (!coordinates) return <div className="map-placeholder"><span aria-hidden="true">⌖</span><strong>{label}</strong><p>{emptyMessage ?? '검증된 숫자 좌표가 없어 지도 핀을 표시하지 않습니다.'}</p>{!emptyMessage && <small>시설 중심이나 반대 방향의 위치로 대체하지 않았습니다.</small>}</div>;
+  if (!coordinates) return <div className="map-placeholder"><span aria-hidden="true">⌖</span><strong>{label}</strong><p>{emptyMessage ?? copy('검증된 숫자 좌표가 없어 지도 핀을 표시하지 않습니다.')}</p>{!emptyMessage && <small>시설 중심이나 반대 방향의 위치로 대체하지 않았습니다.</small>}</div>;
   if (!isKakaoConfigured()) return <div className="notice">지도 연결 설정이 필요합니다. 선택 장소의 이름과 주소를 확인해 주세요.</div>;
-  return <div>{error && <div className="notice error"><p role="status">{error}</p><button onClick={() => setAttempt(value => value + 1)}>지도 다시 연결</button></div>}<div ref={container} className="map-canvas" role="region" aria-label={`${label} 지도`} style={{ height: 280 }} />{stops.length > 0 && <div className="map-legend">
+  return <div>{error && <div className="notice error"><p role="status">{copy(error)}</p><button onClick={() => setAttempt(value => value + 1)}>지도 다시 연결</button></div>}<div ref={container} className="map-canvas" role="region" aria-label={`${label} 지도`} style={{ height: 280 }} />{stops.length > 0 && <div className="map-legend">
     <p><strong>파란 핀 · {homeward ? '목적지' : '출발지'}</strong> {label}</p>
     {stops.length === 1 && !onSelect && !stops[0].href
       ? <p><strong>{stops[0].number ?? 1}번 · {stops[0].isDistanceReference ? '거리 기준점' : '정류장 표시점'}</strong> {stops[0].label}</p>
-      : <p>번호는 각 후보의 거리 기준점이에요. {onSelect ? '번호를 누르면 해당 후보를 목록에서 볼 수 있어요.' : '번호를 누르면 운행편 상세를 볼 수 있어요.'}</p>}
+      : <p>{copy('번호는 각 후보의 거리 기준점이에요.')} {onSelect ? copy('번호를 누르면 해당 후보를 목록에서 볼 수 있어요.') : copy('번호를 누르면 운행편 상세를 볼 수 있어요.')}</p>}
   </div>}</div>;
 }

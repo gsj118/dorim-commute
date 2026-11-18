@@ -28,9 +28,9 @@ test('화정동 비교에서 공식 자료와 금요일 하교 두 경로를 연
   const card = comparison.locator('.dorim-method');
   await expect(card.getByRole('heading', { level: 2 })).toHaveText('내가 아는 장소로 내릴 곳 찾기');
   await card.getByRole('link', { name: '직접 검색해보기', exact: true }).click();
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('내가 아는 장소로 내릴 곳 찾기');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('장소로 통학버스 찾기');
   await expect(page.getByLabel('이용 요일')).toHaveValue('FRI');
-  await expect(page.getByLabel('어디로 돌아가시나요?')).toHaveValue('유니버시아드 힐스테이트 2단지');
+  await expect(page.getByLabel('목적지 장소명')).toHaveValue('유니버시아드 힐스테이트 2단지');
   await page.getByRole('link', { name: '비교 화면으로' }).click();
   await comparison.getByRole('link', { name: '운행편 예시 바로 보기' }).click();
   await expect(page.getByLabel('확인할 요일')).toHaveValue('FRI');

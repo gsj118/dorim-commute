@@ -6,7 +6,7 @@ test('등교 문서 탐색: 홈 → 목록 → 지점별 시각 → 위치 부�
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('아는 장소로 찾는');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('장소로 통학버스 찾기');
   await page.getByRole('button', { name: /등교 노선/ }).click();
   await expect(page.getByRole('heading', { name: '노선 목록', exact: true })).toBeVisible();
   await page.getByRole('button', { name: /송정①/ }).click();
@@ -15,11 +15,11 @@ test('등교 문서 탐색: 홈 → 목록 → 지점별 시각 → 위치 부�
   await expect(page.locator('.detail-facts')).toContainText('시간표에 나온 승차 지점');
   await expect(page.locator('.inline-notice').first()).toContainText('정류장을 선택해 승차 시각을 확인하세요');
   await page.getByRole('button', { name: /서광주우체국/ }).click();
-  await expect(page.locator('.stop-disclosure')).toContainText('실제로 타는 도로변은 이용 전에 확인해 주세요.');
+  await expect(page.locator('.stop-disclosure')).toContainText('이용 전에 실제 승차할 도로변을 확인해 주세요.');
   await page.getByRole('button', { name: '등교 목록으로' }).click();
   await expect(page.getByRole('heading', { name: '노선 목록', exact: true })).toBeVisible();
   await page.goBack();
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('나의 통학편');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('장소로 통학버스 찾기');
   await page.goForward();
   await expect(page.getByRole('heading', { name: '노선 목록', exact: true })).toBeVisible();
   await page.goForward();
@@ -52,7 +52,7 @@ test('미수록 검색은 미운행으로 해석하지 않고 복구된다', asy
   await page.goto('data:text/html,previous');
   await page.goto('/#/routes/toCampus');
   await page.getByRole('searchbox').fill('수록되지않은가상입력');
-  await expect(page.getByText('등교 시간표에서 ‘수록되지않은가상입력’을 찾지 못했어요.')).toBeVisible();
+  await expect(page.getByText('등교 노선 목록에 ‘수록되지않은가상입력’ 검색 결과가 없습니다.')).toBeVisible();
   await expect(page.locator('.route-empty').getByRole('link', { name: '장소 검색' })).toBeVisible();
   await page.goBack();
   await expect(page.getByRole('searchbox')).toHaveValue('');
@@ -82,7 +82,7 @@ test('API 미설정 시 실제 검색을 위장하지 않고 하교 목록으로
   await page.goto('/');
   await page.getByRole('button', { name: '하교 학교 → 광주', exact: true }).click();
   await expect(page.getByText('장소 검색 연결 준비 중')).toBeVisible();
-  await page.getByLabel('어디로 돌아가시나요?').fill('수록되지않은가상입력');
+  await page.getByLabel('목적지 장소명').fill('수록되지않은가상입력');
   await page.getByRole('button', { name: '장소 검색', exact: true }).click();
   await expect(page.getByText('장소·주소 검색이 연결되지 않았습니다. 노선 목록을 이용해 주세요.')).toBeVisible();
   await page.getByRole('link', { name: '노선 목록으로', exact: true }).click();
@@ -94,15 +94,15 @@ test('잘못된 운행편 링크 및 잘못된 percent encoding이 앱을 종료
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/#/trip/not-in-dataset');
-  await expect(page.getByRole('heading', { name: '해당 운행편을 찾을 수 없어요.' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '해당 운행편을 찾을 수 없습니다.' })).toBeVisible();
   await page.goto('/#/trip/%E0%A4%A');
-  await expect(page.getByRole('heading', { name: '해당 운행편을 찾을 수 없어요.' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '해당 운행편을 찾을 수 없습니다.' })).toBeVisible();
   expect(errors).toEqual([]);
 });
 
 test('화면 크기·키보드·주요 화면 접근성과 실제 스크린샷', async ({ page }, testInfo) => {
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('아는 장소로 찾는');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('장소로 통학버스 찾기');
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: '본문으로 건너뛰기' })).toBeFocused();
   await page.keyboard.press('Enter');

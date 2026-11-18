@@ -1,4 +1,7 @@
-import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { useState, type ReactElement } from 'react';
+import { PlacePicker } from '../src/components/PlacePicker';
+import { UiCopyContext } from '../src/uiCopy';
+import { act, cleanup, fireEvent, render as renderComponent, screen, waitFor, within } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { PlaceSearch } from '../src/components/PlaceSearch';
 import { placeProvider } from '../src/providers/kakao';
@@ -8,6 +11,9 @@ import { dataset, getTripStops } from '../src/data';
 import App from '../src/App';
 import { placeAreaLabel, placeRegion } from '../src/domain/placeRegion';
 import { normalizePlace } from '../src/providers/kakao';
+const render = (ui: ReactElement) => renderComponent(ui, {
+  wrapper: ({ children }) => <UiCopyContext.Provider value={true}>{children}</UiCopyContext.Provider>,
+});
 vi.mock('../src/providers/kakao', async importOriginal => ({
   ...await importOriginal<typeof import('../src/providers/kakao')>(),
   isKakaoConfigured: () => false, placeProvider: { search: vi.fn() },
@@ -33,7 +39,7 @@ describe('address context on place cards', () => {
       make('푸른마을아파트', '광주 북구 연제동 2', '주거 > 아파트')];
     vi.mocked(placeProvider.search).mockResolvedValueOnce({ items, page: 1, hasNext: false });
     render(<PlaceSearch direction="fromCampus" weekday={null}/>);
-    fireEvent.change(screen.getByLabelText('어디로 돌아가시나요?'), { target: { value: '푸른마을' } });
+    fireEvent.change(screen.getByLabelText('목적지 장소명'), { target: { value: '푸른마을' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     const district = await screen.findByLabelText('검색 결과 내 지역');
     fireEvent.change(screen.getByLabelText('검색 결과 내 장소 종류'), { target: { value: '입출구' } });
@@ -57,7 +63,7 @@ describe('address context on place cards', () => {
     search.mockResolvedValueOnce({ items: [facility], page: 1, hasNext: false })
       .mockResolvedValueOnce({ items: [outside, apartment], page: 1, hasNext: false });
     render(<PlaceSearch direction="fromCampus" weekday={null}/>);
-    const input = screen.getByLabelText('어디로 돌아가시나요?') as HTMLInputElement;
+    const input = screen.getByLabelText('목적지 장소명') as HTMLInputElement;
     fireEvent.change(input, { target: { value: '북구 푸른마을 2단지' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     const broader = await screen.findByRole('button', { name: '단지 번호 빼고 ‘북구 푸른마을’ 검색' });
@@ -88,7 +94,7 @@ describe('address context on place cards', () => {
     ].map(([place_name, address_name]) => normalizePlace({ place_name, address_name, x: '126', y: '35' }, 'place')!);
     vi.mocked(placeProvider.search).mockResolvedValueOnce({ items, page: 1, hasNext: false });
     render(<PlaceSearch direction="fromCampus" weekday={null}/>);
-    fireEvent.change(screen.getByLabelText('어디로 돌아가시나요?'), { target: { value: '시험아파트' } });
+    fireEvent.change(screen.getByLabelText('목적지 장소명'), { target: { value: '시험아파트' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     const list = await screen.findByRole('list', { name: '아파트 단지' });
     expect(within(list).getAllByRole('button')).toHaveLength(3);
@@ -103,11 +109,11 @@ it('shows the unsupported region recovery reason without opening a disclosure', 
   const place: PlaceSelection = { provider: 'kakao', providerPlaceId: 'outside-test', selectionId: 'outside-test', kind: 'place', name: '지원지역 밖 모의 장소', roadAddress: '경기 수원시 합성 시험 주소', lotAddress: null, regionLabel: '경기 수원시', detailUrl: null, coordinates: { latitude: 37.28, longitude: 127.05, crs: 'WGS84' }, coordinateSource: 'synthetic test only', selectedAt: '', selectionState: 'notSelected', validationState: 'checked' };
   vi.mocked(placeProvider.search).mockResolvedValueOnce({ items: [place], hasNext: false, page: 1 });
   const { container } = render(<PlaceSearch direction="toCampus" weekday="MON"/>);
-  fireEvent.change(screen.getByLabelText('어디에서 출발하시나요?'), { target: { value: '수원 합성 시험' } });
+  fireEvent.change(screen.getByLabelText('출발지 장소명'), { target: { value: '수원 합성 시험' } });
   fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
   fireEvent.click(await screen.findByRole('button', { name: /지원지역 밖 모의 장소/ }));
   const empty = container.querySelector('.selected-place .candidate-empty')!;
-  expect(empty.textContent).toContain('선택한 장소는 현재 거리 비교 지원지역 밖입니다.');
+  expect(empty.textContent).toContain('선택한 장소는 거리 비교 지원 지역 밖입니다.');
   expect(empty.textContent).toContain('장소의 이름·주소를 확인하고 다시 선택');
   expect(empty.textContent).not.toContain('반경 또는 시간조건을 바꿔보세요.');
 });
@@ -117,7 +123,7 @@ describe('search UI asynchronous boundaries', () => {
     const place = normalizePlace({ place_name: '시립박물관', address_name: '광주 북구 시험동', x: '126', y: '35' }, 'place')!;
     vi.mocked(placeProvider.search).mockResolvedValueOnce({ items: [place], page: 1, hasNext: false });
     render(<App/>);
-    fireEvent.change(screen.getByLabelText('어디에서 출발하시나요?'), { target: { value: '시립박물관' } });
+    fireEvent.change(screen.getByLabelText('출발지 장소명'), { target: { value: '시립박물관' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     fireEvent.click(await screen.findByRole('button', { name: /시립박물관.*북구 · 시험동/ }));
     fireEvent.change(screen.getByLabelText('정류장에서 승차할 시각'), { target: { value: '07:30' } });
@@ -126,9 +132,9 @@ describe('search UI asynchronous boundaries', () => {
     const departure = screen.getByLabelText('학교에서 출발할 수 있는 시각') as HTMLInputElement;
     expect(departure.value).toBe('');
     fireEvent.change(departure, { target: { value: '23:59' } });
-    expect(screen.getByRole('link', { name: '시간 조건을 풀고 하교 전체 시간표 보기 →' }).getAttribute('href')).toBe('#/routes/fromCampus');
+    expect(screen.getByRole('link', { name: '시간 조건 해제 후 하교 노선 전체 보기 →' }).getAttribute('href')).toBe('#/routes/fromCampus');
     fireEvent.click(screen.getByRole('button', { name: /^등교\s*광주 → 학교$/ }));
-    expect(screen.getByRole('heading', { name: '주변 승차 지점·시각' })).toBeTruthy();
+    expect(screen.getByRole('heading', { name: '승차 정류장 후보' })).toBeTruthy();
     expect(screen.getByRole('heading', { name: '선택한 장소 · 시립박물관' })).toBeTruthy();
     expect(vi.mocked(placeProvider.search)).toHaveBeenCalledTimes(1);
   });
@@ -154,7 +160,7 @@ describe('search UI asynchronous boundaries', () => {
       .mockResolvedValueOnce({ items: local.slice(0, 10), page: 2, hasNext: true })
       .mockResolvedValueOnce({ items: local.slice(9), page: 3, hasNext: false });
     render(<PlaceSearch direction="fromCampus" weekday={null}/>);
-    fireEvent.change(screen.getByLabelText('어디로 돌아가시나요?'), { target: { value: '시험 단지' } });
+    fireEvent.change(screen.getByLabelText('목적지 장소명'), { target: { value: '시험 단지' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     const next = await screen.findByRole('button', { name: '나머지 장소 8곳 모두 보기' });
     expect(screen.queryByText('시험 단지 99')).toBeNull();
@@ -172,7 +178,7 @@ describe('search UI asynchronous boundaries', () => {
       .mockRejectedValueOnce(new Error('통신 오류'))
       .mockResolvedValue({ items: [], page: 1, hasNext: false });
     render(<PlaceSearch direction="toCampus" weekday={null}/>);
-    const field = screen.getByLabelText('어디에서 출발하시나요?');
+    const field = screen.getByLabelText('출발지 장소명');
     fireEvent.change(field, { target: { value: '나주 시험 단지' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     const widen = await screen.findByRole('button', { name: '다른 지역까지 검색' });
@@ -180,7 +186,7 @@ describe('search UI asynchronous boundaries', () => {
     expect(api).toHaveBeenCalledTimes(1);
     fireEvent.click(widen);
     fireEvent.click(await screen.findByRole('button', { name: '다시 검색' }));
-    await screen.findByText('검색 결과가 없습니다.');
+    await screen.findByText(/에 대한 장소 검색 결과가 없습니다\.$/);
     expect(api.mock.calls.slice(1)).toEqual([['시험 단지', 'place', 1], ['시험 단지', 'place', 1]]);
     fireEvent.change(field, { target: { value: '새 단지' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
@@ -190,41 +196,41 @@ describe('search UI asynchronous boundaries', () => {
   it('shows missing connection and keeps an independent list recovery path', () => {
     render(<PlaceSearch direction="fromCampus" weekday={null}/>);
     expect(screen.getByText('장소 검색 연결 준비 중')).toBeTruthy();
-    expect(screen.getByLabelText('어디로 돌아가시나요?')).toBeTruthy();
+    expect(screen.getByLabelText('목적지 장소명')).toBeTruthy();
     expect(screen.queryByText(/추천 1위/)).toBeNull();
   });
   it('discards an old response when direction changes', async () => {
     let resolve!: (page: SearchPage) => void;
     vi.mocked(placeProvider.search).mockImplementationOnce(() => new Promise(done => { resolve = done; }));
     const { rerender } = render(<PlaceSearch direction="toCampus" weekday="MON"/>);
-    fireEvent.change(screen.getByLabelText('어디에서 출발하시나요?'), { target: { value: '테스트' } });
+    fireEvent.change(screen.getByLabelText('출발지 장소명'), { target: { value: '테스트' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     rerender(<PlaceSearch direction="fromCampus" weekday="MON"/>);
     await act(async () => resolve({ items: [], page: 1, hasNext: false }));
-    expect(screen.queryByText('검색 결과가 없습니다.')).toBeNull();
+    expect(screen.queryByText(/에 대한 장소 검색 결과가 없습니다\.$/)).toBeNull();
   });
   it('reports error and allows a successful retry with a distinct empty state', async () => {
     vi.mocked(placeProvider.search).mockRejectedValueOnce(new Error('테스트 API 오류')).mockResolvedValueOnce({ items: [], hasNext: false, page: 1 });
     render(<PlaceSearch direction="toCampus" weekday={null}/>);
-    fireEvent.change(screen.getByLabelText('어디에서 출발하시나요?'), { target: { value: '테스트' } });
+    fireEvent.change(screen.getByLabelText('출발지 장소명'), { target: { value: '테스트' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     await waitFor(() => expect(screen.getByText('테스트 API 오류')).toBeTruthy());
     fireEvent.click(screen.getByRole('button', { name: '다시 검색' }));
-    await waitFor(() => expect(screen.getByText('검색 결과가 없습니다.')).toBeTruthy());
+    await waitFor(() => expect(screen.getByText(/에 대한 장소 검색 결과가 없습니다\.$/)).toBeTruthy());
   });
   it('requires explicit place selection and explains zero real-data candidates', async () => {
     const place: PlaceSelection = { provider: 'kakao', providerPlaceId: 'mock-only', selectionId: 'mock-only', kind: 'place', name: '모의 장소', roadAddress: '모의 주소', lotAddress: null, regionLabel: '모의 지역', detailUrl: null, coordinates: { latitude: 35, longitude: 126, crs: 'WGS84' }, coordinateSource: 'synthetic-test-only', selectedAt: '2026-11-06T00:00:00+09:00', selectionState: 'notSelected', validationState: 'checked' };
     vi.mocked(placeProvider.search).mockResolvedValueOnce({ items: [], page: 1, hasNext: false }).mockResolvedValueOnce({ items: [place], hasNext: false, page: 1 });
     render(<PlaceSearch direction="fromCampus" weekday="FRI"/>);
-    fireEvent.change(screen.getByLabelText('어디로 돌아가시나요?'), { target: { value: '모의' } });
+    fireEvent.change(screen.getByLabelText('목적지 장소명'), { target: { value: '모의' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     fireEvent.click(await screen.findByRole('button', { name: '다른 지역까지 검색' }));
     await waitFor(() => expect(screen.getByRole('button', { name: /모의 장소/ })).toBeTruthy());
-    expect(screen.queryByText('현재 비교 가능한 거리 후보는 0개입니다.')).toBeNull();
+    expect(screen.queryByText('거리 비교 결과 0곳')).toBeNull();
     fireEvent.click(screen.getByRole('button', { name: /모의 장소/ }));
-    expect(screen.getByText('현재 비교 가능한 거리 후보는 0개입니다.')).toBeTruthy();
+    expect(screen.getByText('거리 비교 결과 0곳')).toBeTruthy();
     expect(screen.getByText('검색에서 빠진 지점 보기')).toBeTruthy();
-    expect(screen.getByRole('link', { name: '이 방향 노선 목록 보기 →' })).toBeTruthy();
+    expect(screen.getByRole('link', { name: '하교 노선 전체 보기 →' })).toBeTruthy();
   });
   it.each([
     { lat: 35.108, lng: 126.868, withinKm: 0, first: 2 },
@@ -253,7 +259,7 @@ describe('search UI asynchronous boundaries', () => {
     const place: PlaceSelection = { provider: 'kakao', providerPlaceId: 'test-only', selectionId: 'test-only', kind: 'place', name: '선택 검증용 가상 장소', roadAddress: '광주광역시 서구 시험용 주소', lotAddress: '광주광역시 서구 시험용 주소', regionLabel: '광주광역시 서구', detailUrl: null, coordinates: stop.location!.coordinates.value, coordinateSource: 'test fixture at recorded marker, not live API', selectedAt: '2026-11-06T00:00:00+09:00', selectionState: 'notSelected', validationState: 'checked' };
     vi.mocked(placeProvider.search).mockResolvedValueOnce({ items: [place], hasNext: false, page: 1 });
     render(<PlaceSearch direction="toCampus" weekday="MON"/>);
-    fireEvent.change(screen.getByLabelText('어디에서 출발하시나요?'), { target: { value: '검증용' } });
+    fireEvent.change(screen.getByLabelText('출발지 장소명'), { target: { value: '검증용' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     await waitFor(() => expect(screen.getByRole('button', { name: /선택 검증용/ })).toBeTruthy());
     fireEvent.click(screen.getByRole('button', { name: /선택 검증용/ }));
@@ -272,7 +278,7 @@ describe('search UI asynchronous boundaries', () => {
     const place: PlaceSelection = { provider: 'kakao', providerPlaceId: 'test-homeward', selectionId: 'test-homeward', kind: 'place', name: '하교 검증용 가상 장소', roadAddress: '광주광역시 남구 시험용 주소', lotAddress: '광주광역시 남구 시험용 주소', regionLabel: '광주광역시 남구', detailUrl: null, coordinates: stop.location!.coordinates.value, coordinateSource: 'synthetic place selection at recorded marker, not live API', selectedAt: '2026-11-06T00:00:00+09:00', selectionState: 'notSelected', validationState: 'checked' };
     vi.mocked(placeProvider.search).mockResolvedValueOnce({ items: [place], hasNext: false, page: 1 });
     render(<PlaceSearch direction="fromCampus" weekday={null}/>);
-    fireEvent.change(screen.getByLabelText('어디로 돌아가시나요?'), { target: { value: '검증용' } });
+    fireEvent.change(screen.getByLabelText('목적지 장소명'), { target: { value: '검증용' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     await waitFor(() => expect(screen.getByRole('button', { name: /하교 검증용/ })).toBeTruthy());
     fireEvent.click(screen.getByRole('button', { name: /하교 검증용/ }));
@@ -284,9 +290,9 @@ describe('search UI asynchronous boundaries', () => {
     const lateTrip = screen.getByRole('region', { name: '참고 후보' }).querySelector('[data-trip-id="tp-s25-from-jinwol-06"]');
     expect(lateTrip?.textContent).toContain('18:20');
     expect(lateTrip?.textContent).not.toContain('금요일');
-    expect(screen.getAllByText('학교에서 타는 곳 · MNU 스퀘어 앞')).toHaveLength(1);
+    expect(screen.getAllByText('학교 승차 위치 · MNU 스퀘어 앞')).toHaveLength(1);
     cards.forEach(card => {
-      expect(card.textContent).not.toContain('학교에서 타는 곳 · MNU 스퀘어 앞');
+      expect(card.textContent).not.toContain('학교 승차 위치 · MNU 스퀘어 앞');
       expect(card.textContent).toContain('비교할 요일을 선택해 주세요.');
     });
   });
@@ -295,14 +301,14 @@ describe('search UI asynchronous boundaries', () => {
     const place: PlaceSelection = { provider: 'kakao', providerPlaceId: 'time-ui', selectionId: 'time-ui', kind: 'place', name: '시간조건 검사용 장소', roadAddress: '광주광역시 서구 시험 주소', lotAddress: null, regionLabel: '광주광역시 서구', detailUrl: null, coordinates: stop.location!.coordinates.value, coordinateSource: 'synthetic test, not real search', selectedAt: '', selectionState: 'notSelected', validationState: 'checked' };
     vi.mocked(placeProvider.search).mockResolvedValueOnce({ items: [place], hasNext: false, page: 1 });
     const { rerender } = render(<PlaceSearch direction="toCampus" weekday="MON"/>);
-    fireEvent.change(screen.getByLabelText('어디에서 출발하시나요?'), { target: { value: '검사용' } });
+    fireEvent.change(screen.getByLabelText('출발지 장소명'), { target: { value: '검사용' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     fireEvent.click(await screen.findByRole('button', { name: /시간조건 검사용 장소/ }));
     expect(screen.getByRole('region', { name: '참고 후보' })).toBeTruthy();
     fireEvent.change(screen.getByLabelText('정류장에서 승차할 시각'), { target: { value: '23:59' } });
-    expect(screen.getByText('현재 비교 가능한 거리 후보는 0개입니다.')).toBeTruthy();
+    expect(screen.getByText('거리 비교 결과 0곳')).toBeTruthy();
     expect(screen.getByText(/현재 조건에서 제외·생략한/)).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: '시간 조건 지우고 다시 비교' }));
+    fireEvent.click(screen.getByRole('button', { name: '시간 조건 해제 후 다시 비교' }));
     expect(screen.getByRole('region', { name: '참고 후보' })).toBeTruthy();
     rerender(<PlaceSearch direction="toCampus" weekday="FRI"/>);
     expect(screen.getByRole('heading', { name: '선택한 장소 · 시간조건 검사용 장소' })).toBeTruthy();
@@ -313,7 +319,7 @@ describe('search UI asynchronous boundaries', () => {
     const place: PlaceSelection = { provider: 'kakao', providerPlaceId: 'group-ui', selectionId: 'group-ui', kind: 'place', name: '복수편 검사용 장소', roadAddress: '광주광역시 남구 시험 주소', lotAddress: null, regionLabel: '광주광역시 남구', detailUrl: null, coordinates: stop.location!.coordinates.value, coordinateSource: 'synthetic test at recorded marker', selectedAt: '', selectionState: 'notSelected', validationState: 'checked' };
     vi.mocked(placeProvider.search).mockResolvedValueOnce({ items: [place], hasNext: false, page: 1 });
     render(<PlaceSearch direction="fromCampus" weekday="MON"/>);
-    fireEvent.change(screen.getByLabelText('어디로 돌아가시나요?'), { target: { value: '복수편' } });
+    fireEvent.change(screen.getByLabelText('목적지 장소명'), { target: { value: '복수편' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     fireEvent.click(await screen.findByRole('button', { name: /복수편 검사용 장소/ }));
     const group = Array.from(document.querySelectorAll('.candidate-card')).find(card => card.querySelector('[data-trip-id="tp-s25-from-jinwol-01"]') && card.querySelector('[data-trip-id="tp-s25-from-jinwol-03"]'))!;
@@ -332,20 +338,20 @@ describe('search UI asynchronous boundaries', () => {
     vi.mocked(placeProvider.search).mockResolvedValueOnce({ items: [place], hasNext: false, page: 1 });
     const { container } = render(<App/>);
     fireEvent.change(screen.getByLabelText('이용 요일'), { target: { value: 'MON' } });
-    fireEvent.change(screen.getByLabelText('어디에서 출발하시나요?'), { target: { value: '복귀 검사용' } });
+    fireEvent.change(screen.getByLabelText('출발지 장소명'), { target: { value: '복귀 검사용' } });
     fireEvent.click(screen.getByRole('button', { name: '장소 검색' }));
     fireEvent.click(await screen.findByRole('button', { name: /복귀 검사용 장소/ }));
     fireEvent.change(screen.getByLabelText('비교할 직선거리 반경'), { target: { value: '1000' } });
     fireEvent.change(screen.getByLabelText('표시할 정류장 수'), { target: { value: '5' } });
     fireEvent.change(screen.getByLabelText('정류장에서 승차할 시각'), { target: { value: '06:00' } });
-    const link = within(container.querySelector('.reference-candidates') as HTMLElement).getAllByRole('link', { name: /지점 승차.*상세 보기/ })[0];
+    const link = within(container.querySelector('.reference-candidates') as HTMLElement).getAllByRole('link', { name: /승차 시각.*상세 보기/ })[0];
     const openedTrip = dataset.trips.find(trip => trip.tripId === decodeURIComponent(link.getAttribute('href')!.split('/')[2]))!;
     await act(async () => { window.location.hash = link.getAttribute('href')!; window.dispatchEvent(new Event('hashchange')); });
     expect(within(container.querySelector('.page-section') as HTMLElement).getByRole('heading', { name: openedTrip.displayName, level: 1 })).toBeTruthy();
     const back = within(container.querySelector('.page-section') as HTMLElement).getByRole('link', { name: '← 장소 검색 결과로' });
     await act(async () => { window.location.hash = back.getAttribute('href')!; window.dispatchEvent(new Event('hashchange')); });
     expect(screen.getByRole('heading', { name: '선택한 장소 · 복귀 검사용 장소' })).toBeTruthy();
-    expect((screen.getByLabelText('어디에서 출발하시나요?') as HTMLInputElement).value).toBe('복귀 검사용');
+    expect((screen.getByLabelText('출발지 장소명') as HTMLInputElement).value).toBe('복귀 검사용');
     expect((screen.getByLabelText('비교할 직선거리 반경') as HTMLSelectElement).value).toBe('1000');
     expect((screen.getByLabelText('표시할 정류장 수') as HTMLSelectElement).value).toBe('5');
     expect((screen.getByLabelText('정류장에서 승차할 시각') as HTMLInputElement).value).toBe('06:00');
@@ -359,7 +365,7 @@ describe('search UI asynchronous boundaries', () => {
     const placePanel = within(container.querySelector('.search-panel') as HTMLElement);
     fireEvent.click(placePanel.getByRole('button', { name: /^하교\s*학교 → 광주$/ }));
     fireEvent.change(placePanel.getByLabelText('이용 요일'), { target: { value: 'FRI' } });
-    fireEvent.change(placePanel.getByLabelText('어디로 돌아가시나요?'), { target: { value: '문화센터' } });
+    fireEvent.change(placePanel.getByLabelText('목적지 장소명'), { target: { value: '문화센터' } });
     fireEvent.click(placePanel.getByRole('button', { name: '장소 검색' }));
     fireEvent.click(await placePanel.findByText('모의 문화센터'));
     fireEvent.change(placePanel.getByLabelText('학교에서 출발할 수 있는 시각'), { target: { value: '16:00' } });
@@ -385,4 +391,26 @@ describe('search UI asynchronous boundaries', () => {
     expect(stopField.value).toBe('서광주우체국');
     expect(vi.mocked(placeProvider.search)).toHaveBeenCalledTimes(1);
   });
+});
+
+
+it('recovers a controlled empty place filter without repeating the provider search', () => {
+  // Synthetic incompatible filters: zero filtered places is distinct from a failed provider search.
+  const items = [
+    normalizePlace({ place_name: '합성 아파트', address_name: '광주 서구 시험동', category_name: '주거 > 아파트', x: '126', y: '35' }, 'place')!,
+    normalizePlace({ place_name: '합성 은행', address_name: '광주 북구 시험동', category_name: '금융 > 은행', x: '126', y: '35' }, 'place')!,
+  ];
+  function FilterScenario() {
+    const [filters, setFilters] = useState({ district: '서구', category: '은행', limit: 3 });
+    return <UiCopyContext.Provider value={true}><PlacePicker summaryRef={null} sections={[{ title: null, items }]}
+      query="합성" scope="광주" nationwide={false} showDistricts selected={null} filters={filters}
+      onFilterChange={setFilters} onSelect={vi.fn()}/></UiCopyContext.Provider>;
+  }
+  render(<FilterScenario/>);
+  expect(screen.getByText(/선택한 지역·종류에 맞는 장소가 없습니다/)).toBeTruthy();
+  expect(screen.queryByRole('button', { name: /합성 아파트/ })).toBeNull();
+  fireEvent.change(screen.getByLabelText('검색 결과 내 장소 종류'), { target: { value: '' } });
+  expect(screen.getByRole('button', { name: /합성 아파트/ })).toBeTruthy();
+  expect(screen.queryByText(/선택한 지역·종류에 맞는 장소가 없습니다/)).toBeNull();
+  expect(placeProvider.search).not.toHaveBeenCalled();
 });

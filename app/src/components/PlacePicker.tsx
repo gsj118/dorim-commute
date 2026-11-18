@@ -1,3 +1,4 @@
+import { useUiCopy } from '../uiCopy';
 import type { Ref } from 'react';
 import type { PlaceSelection } from '../domain/types';
 import { gwangjuDistrict, placeAreaLabel } from '../domain/placeRegion';
@@ -47,6 +48,7 @@ interface Props {
 }
 
 export function PlacePicker({ summaryRef, sections, query, scope, nationwide, showDistricts, selected, filters, onFilterChange, onSelect }: Props) {
+  const { refined } = useUiCopy();
   const { district, category, limit } = filters;
   const items = sections.flatMap(section => section.items);
   const districts = showDistricts ? optionCounts(items, districtOf).sort(([a], [b]) => a.localeCompare(b, 'ko')) : [];
@@ -71,6 +73,7 @@ export function PlacePicker({ summaryRef, sections, query, scope, nationwide, sh
       }}><option value="">모든 종류</option>{categories.map(([value, count]) => <option key={value} value={value}>{value} ({count})</option>)}</select></label>}
     </div>}
     {(district || category) && <p className="place-filter-status" role="status">{[district, category].filter(Boolean).join(' · ')} 검색 결과 {page.count}곳</p>}
+    {refined && !page.count && (district || category) && <p className="notice">선택한 지역·종류에 맞는 장소가 없습니다. 지역 또는 장소 종류를 변경해 주세요.</p>}
     <div id="place-result-list">{page.sections.map(section => <div className="place-result-group" key={section.title || 'places'}>
       {section.title && (!category || filtered.length > 1) && <h3>{section.title} <small>· {filtered.find(group => group.title === section.title)?.items.length}곳</small></h3>}
       <ul className="place-results" aria-label={section.title || undefined}>{section.items.map(item => {

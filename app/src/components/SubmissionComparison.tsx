@@ -11,11 +11,11 @@ export const exampleDestination = {
   coordinates: { latitude: 35.14640530365541, longitude: 126.87963166633668, crs: 'WGS84' as const },
 };
 
-function SearchExampleLink() {
-  return <a className="method-action" href={fridayExample + '#/search'}>직접 검색해보기 <Icon name="arrow"/></a>;
+function SearchExampleLink({ refined = false }: { refined?: boolean }) {
+  return <a className="method-action" href={fridayExample + (refined ? '&ui=refined' : '') + '#/search'}>직접 검색해보기 <Icon name="arrow"/></a>;
 }
 
-export function SubmissionComparison() {
+export function SubmissionComparison({ refined = false }: { refined?: boolean }) {
   const tableHeading = useRef<HTMLHeadingElement>(null);
   return <section className="submission-comparison" aria-labelledby="comparison-question">
     <header className="comparison-intro">
@@ -40,8 +40,8 @@ export function SubmissionComparison() {
         <h2>내가 아는 장소로 내릴 곳 찾기</h2>
         <p>가려는 장소를 검색해 근처에서 내릴 만한 정류장을 찾아보세요. 그 정류장을 지나는 버스가 학교 어디에서 몇 시에 출발하는지도 확인할 수 있어요.</p>
         <div className="method-actions">
-          <SearchExampleLink/>
-          <a className="comparison-text-link" href={fridayExample + '&example=trip#/trip/tp-s25-from-songjeong-03/occ-tp-s25-from-songjeong-03-01'}>운행편 예시 바로 보기</a>
+          <SearchExampleLink refined={refined}/>
+          <a className="comparison-text-link" href={fridayExample + (refined ? '&ui=refined' : '') + '&example=trip#/trip/tp-s25-from-songjeong-03/occ-tp-s25-from-songjeong-03-01'}>운행편 예시 바로 보기</a>
         </div>
       </article>
     </div>
@@ -55,6 +55,6 @@ export function SubmissionComparison() {
         <span>노선표 크게 보기 <Icon name="external"/></span>
       </a>
     </figure>
-    <SearchExampleLink/>
+    <SearchExampleLink refined={refined}/>
   </section>;
 }

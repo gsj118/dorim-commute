@@ -54,7 +54,7 @@ it('updates the reference point and its source when choosing a different homewar
   fireEvent.click(screen.getByRole('button', { name: /광진빌딩.*양동초입구/ }));
   expect(location().querySelector('h2')?.textContent).toBe('광진빌딩(양동초입구)');
   expect(location().textContent).toContain('‘광주양동초등학교’ 시설 위치');
-  expect(location().textContent).toContain('정확한 하차 위치는 확인되지 않았어요.');
+  expect(location().textContent).toContain('실제 하차 위치는 확인되지 않았습니다.');
   expect(location().textContent).not.toContain('추선회관');
   expect(location().querySelector('a[href*="data.go.kr"]')).toBeTruthy();
   fireEvent.click(screen.getByRole('button', { name: /MNU 스퀘어 앞/ }));

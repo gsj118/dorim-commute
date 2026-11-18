@@ -100,13 +100,13 @@ test('동일 하차지점 복수편·하교 출발시각·금요일 불일치·0
   await expect(page.locator('.candidate-relations article[data-trip-id="tp-s25-from-jinwol-01"]')).toHaveCount(0);
   await expect(page.locator('.candidate-relations article[data-trip-id="tp-s25-from-jinwol-03"]')).toHaveCount(0);
   await page.getByLabel('학교에서 출발할 수 있는 시각').fill('23:59');
-  await expect(page.getByText('현재 비교 가능한 거리 후보는 0개입니다.', { exact: true })).toBeVisible();
-  await expect(page.getByRole('link', { name: '시간 조건을 풀고 하교 전체 시간표 보기 →', exact: true })).toBeVisible();
+  await expect(page.getByText('거리 비교 결과 0곳', { exact: true })).toBeVisible();
+  await expect(page.getByRole('link', { name: '시간 조건 해제 후 하교 노선 전체 보기 →', exact: true })).toBeVisible();
   await page.locator('.result-evidence>summary').click();
   const excluded = page.locator('.result-evidence>details').filter({ has: page.locator('summary').filter({ hasText: '현재 조건에서 제외' }) });
   await excluded.locator('summary').click();
   await expect(excluded).toContainText('확인된 문서 조건에 맞지 않습니다.');
-  await page.getByRole('button', { name: '시간 조건 지우고 다시 비교', exact: true }).click();
+  await page.getByRole('button', { name: '시간 조건 해제 후 다시 비교', exact: true }).click();
   await expect(page.locator('.candidate-card').first()).toBeVisible();
   await expect(page.locator('.candidate-relations article[data-trip-id="tp-s25-from-jinwol-01"]')).toHaveCount(0);
 });
@@ -151,5 +151,5 @@ test('지연 검색 중 라이브 상태를 알리고 빈 결과로 전환', asy
   await page.getByRole('button', { name: '장소 검색', exact: true }).click();
   await expect(page.locator('.place-search [aria-live] [role="status"]')).toContainText('장소를 검색하고 있습니다');
   await expect(page.getByRole('button', { name: '검색 중…', exact: true })).toBeDisabled();
-  await expect(page.getByText('검색 결과가 없습니다.', { exact: true })).toBeVisible();
+  await expect(page.getByText('‘합성 지연 검색’에 대한 장소 검색 결과가 없습니다.', { exact: true })).toBeVisible();
 });

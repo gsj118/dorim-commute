@@ -40,7 +40,7 @@ test('하교 거리 0건에서 좌표 없는 하차편을 찾아 학교 출발�
   await page.locator('.time-options > summary').click();
   await page.getByLabel('학교에서 출발할 수 있는 시각').fill('23:59');
   const list = page.locator('#candidate-list');
-  await expect(list).toContainText('현재 비교 가능한 거리 후보는 0개입니다.');
+  await expect(list).toContainText('거리 비교 결과 0곳');
   const coverage = list.locator('.direction-coverage');
   await expect(coverage.locator('p').first()).toBeHidden();
   await coverage.locator('summary').click();
@@ -58,13 +58,13 @@ test('하교 거리 0건에서 좌표 없는 하차편을 찾아 학교 출발�
   await fifth.click();
   await expect(page.locator('.detail-facts')).toContainText('18:20');
   await expect(page.locator('.detail-facts')).toContainText('MNU 스퀘어 앞');
-  await expect(page.locator('.detail-facts')).toContainText('도착 시각은 시간표에 없어요.');
-  await expect(page.locator('.location-panel')).toContainText('정확한 하차 위치는 확인되지 않았어요.');
+  await expect(page.locator('.detail-facts')).toContainText('도착 시각은 시간표에 없습니다.');
+  await expect(page.locator('.location-panel')).toContainText('실제 하차 위치는 확인되지 않았습니다.');
   await page.getByRole('link', { name: '← 장소 검색 결과로' }).click();
   await expect(stop).toBeFocused();
   await expect(page.locator('.selected-place h3')).toContainText('합성 시험 장소');
   await expect(page.getByLabel('학교에서 출발할 수 있는 시각')).toHaveValue('23:59');
-  await expect(list).toContainText('현재 비교 가능한 거리 후보는 0개입니다.');
+  await expect(list).toContainText('거리 비교 결과 0곳');
   await expect(page.getByRole('combobox', { name: '이용 요일' })).toHaveValue('FRI');
 });
 
@@ -74,7 +74,7 @@ test('빌드 자산·첫 진입·직접 진입·새로고침·선택 화면 지�
   page.on('request', request => { if (new URL(request.url()).pathname.endsWith('.js')) scripts.push(new URL(request.url()).pathname); });
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('아는 장소로 찾는');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('장소로 통학버스 찾기');
   expect(scripts.some(path => path.startsWith('/assets/'))).toBe(true);
   expect(scripts.some(path => path.includes('/src/') || path.includes('@vite'))).toBe(false);
   expect(scripts.some(path => /AsIsView|EvaluationPanel/.test(path))).toBe(false);
@@ -164,7 +164,7 @@ test('금요일 16시 이후 동신고의 진월⑤를 장소 검색에서 바�
   const fifth = page.locator('.candidate-card').filter({ has: page.getByRole('heading', { name: /동신고/ }) })
     .locator('article[data-trip-id="tp-s25-from-jinwol-05"]');
   await expect(fifth).toContainText('18:20');
-  await expect(fifth.locator('..').locator('..')).toContainText('정확한 하차 위치는 확인되지 않았어요.');
+  await expect(fifth.locator('..').locator('..')).toContainText('실제 하차 위치는 확인되지 않았습니다.');
   await fifth.locator('.candidate-detail-link').click();
   await expect(page.locator('.detail-facts')).toContainText('18:20');
   await expect(page.locator('.stop-timeline li.is-selected')).toContainText('동신고');
@@ -183,7 +183,7 @@ test('등교 승차시각 이후 필터와 실제 운행 미확정 표시', asyn
   const times = await page.locator('.candidate-time strong').allTextContents();
   expect(times.length).toBeGreaterThan(0);
   for (const time of times) expect(time >= '07:15').toBe(true);
-  await expect(page.locator('.comparison-footnote')).toContainText('변경될 수 있어요');
+  await expect(page.locator('.comparison-footnote')).toContainText('변경될 수 있습니다');
   await expect(page.getByRole('region', { name: '참고 후보', exact: true })).toContainText('실제 도로변 위치 확인 필요');
 });
 
@@ -191,17 +191,17 @@ test('주소검색·빈 결과·통신 실패 후 재검색·목록 대안', asy
   await sdkBoundary(page); await page.goto('/');
   await page.getByRole('button', { name: '주소', exact: true }).click();
   await page.locator('#place-query').fill('합성 주소');
-  await page.getByRole('button', { name: '장소 검색', exact: true }).click();
+  await page.getByRole('button', { name: '주소 검색', exact: true }).click();
   await expect(page.locator('.place-results button')).toHaveCount(1);
   expect(await page.evaluate(() => (window as unknown as { __rc1Calls: string[] }).__rc1Calls)).toEqual(['address']);
   await page.locator('#place-query').fill('빈결과');
-  await page.getByRole('button', { name: '장소 검색', exact: true }).click();
-  await expect(page.getByText('검색 결과가 없습니다.', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '주소 검색', exact: true }).click();
+  await expect(page.getByText('‘빈결과’에 대한 주소 검색 결과가 없습니다.', { exact: true })).toBeVisible();
   await page.locator('#place-query').fill('오류');
-  await page.getByRole('button', { name: '장소 검색', exact: true }).click();
-  await expect(page.getByText('장소 검색에 실패했습니다. 잠시 뒤 재시도하거나 주소 검색을 이용해 주세요.', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '주소 검색', exact: true }).click();
+  await expect(page.getByText('검색 결과를 불러오지 못했습니다. 다시 검색하거나 검색 방식을 변경해 주세요.', { exact: true })).toBeVisible();
   await page.locator('#place-query').fill('합성 재시도');
-  await page.getByRole('button', { name: '장소 검색', exact: true }).click();
+  await page.getByRole('button', { name: '주소 검색', exact: true }).click();
   await expect(page.locator('.place-results button')).toHaveCount(1);
   await page.getByRole('navigation', { name: '주요 메뉴' }).getByRole('link', { name: '노선 목록', exact: true }).click();
   await expect(page.locator('.trip-card')).toHaveCount(5);
