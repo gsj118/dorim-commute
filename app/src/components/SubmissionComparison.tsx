@@ -26,7 +26,7 @@ export function SubmissionComparison({ refined = false }: { refined?: boolean })
       <article>
         <p className="method-label"><Icon name="route"/> 기존 방식 · 공식 Unibus</p>
         <h2>노선에서 정류장 찾기</h2>
-        <p>Unibus의 ‘노선정보 → 하교’에서 경유지를 살펴보세요. 이 페이지의 학교 노선표에서는 각 편의 출발시간과 금요일 비고를 대조할 수 있어요.</p>
+        <p>Unibus의 ‘노선정보 → 하교’에서 경유지를 확인합니다. 아래 학교 노선표에서 각 운행편의 학교 출발 시각과 금요일 변경 사항을 대조할 수 있습니다.</p>
         <div className="method-actions">
           <a className="method-action" href={officialUnibus} target="_blank" rel="noreferrer">공식 Unibus 열기 <Icon name="external"/><span className="sr-only">(새 탭)</span></a>
           <button type="button" className="comparison-text-link" onClick={() => {
@@ -37,8 +37,8 @@ export function SubmissionComparison({ refined = false }: { refined?: boolean })
       </article>
       <article className="dorim-method">
         <p className="method-label"><Icon name="pin"/> 도림통학</p>
-        <h2>내가 아는 장소로 내릴 곳 찾기</h2>
-        <p>가려는 장소를 검색해 근처에서 내릴 만한 정류장을 찾아보세요. 그 정류장을 지나는 버스가 학교 어디에서 몇 시에 출발하는지도 확인할 수 있어요.</p>
+        <h2>목적지 주변 하차 정류장 찾기</h2>
+        <p>목적지를 검색하면 주변 하차 정류장과 해당 정류장을 지나는 운행편을 확인할 수 있습니다. 각 운행편의 학교 승차 위치와 학교 출발 시각을 함께 표시합니다.</p>
         <div className="method-actions">
           <SearchExampleLink refined={refined}/>
           <a className="comparison-text-link" href={fridayExample + (refined ? '&ui=refined' : '') + '&example=trip#/trip/tp-s25-from-songjeong-03/occ-tp-s25-from-songjeong-03-01'}>운행편 예시 바로 보기</a>

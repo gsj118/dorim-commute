@@ -49,7 +49,7 @@ test('최종 UI는 기본 주소에 적용되고 기존 비교 주소의 홈·�
   await expect(page.locator('.demo-scenario')).toBeVisible();
   await page.getByRole('link', { name: '비교 화면으로', exact: true }).click();
   await expect(page).toHaveURL(/\/\?ui=refined#\/compare$/);
-  await expect(page.locator('.ui-refined')).toHaveCount(0);
+  await expect(page.locator('.ui-refined')).toHaveCount(1);
   await page.getByRole('link', { name: '운행편 예시 바로 보기', exact: true }).click();
   await page.reload();
   await expect(page.locator('.ui-refined .detail-facts')).toContainText('15:30');
@@ -62,7 +62,7 @@ test('최종 UI는 기본 주소에 적용되고 기존 비교 주소의 홈·�
   await expect(page.locator('.demo-scenario')).toHaveCount(0);
 });
 
-test('비교·As-is·평가 화면에는 일반 이용 UI가 적용되지 않는다', async ({ page }) => {
+test('As-is·평가 화면에는 일반 이용 UI가 적용되지 않는다', async ({ page }) => {
   const appearance = () => page.locator('.app-shell').evaluate(root => {
     const properties = ['display', 'position', 'font-family', 'font-size', 'font-weight', 'line-height', 'letter-spacing',
       'color', 'background-color', 'background-image', 'border', 'border-radius', 'padding', 'margin', 'gap',
@@ -72,7 +72,7 @@ test('비교·As-is·평가 화면에는 일반 이용 UI가 적용되지 않는
       return [e.tagName, ...properties.map(p => style.getPropertyValue(p)), ...[box.x, box.y, box.width, box.height].map(v => Math.round(v * 100) / 100)];
     });
   });
-  for (const hash of ['#/compare', '#/asis', '#/evaluation']) {
+  for (const hash of ['#/asis', '#/evaluation']) {
     await page.goto(`/${hash}`);
     await expect(page.locator('main h1').filter({ visible: true })).toBeVisible();
     await page.locator('.brand img').evaluate((image: HTMLImageElement) => image.decode());

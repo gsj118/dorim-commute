@@ -50,6 +50,13 @@ try {
       await expect(first).toContainText('17:30');
       await expect(first).toContainText('18:20');
       await expect(page.locator('.selected-place-heading')).toHaveCSS('background-image', /meadow/);
+      await page.locator('.selected-place-heading').evaluate(async element => {
+        const url = getComputedStyle(element).backgroundImage.match(/url\("?([^"\)]+)"?\)/)?.[1];
+        if (!url) throw new Error('Selected place illustration URL is missing');
+        const illustration = new Image();
+        illustration.src = url;
+        await illustration.decode();
+      });
       await page.locator('.selected-place-heading').evaluate(element => element.scrollIntoView({ block: 'start' }));
       await capture('homeward-results');
       await first.locator('.candidate-map-button').click();
@@ -100,8 +107,16 @@ try {
     await expect(page.locator('.ui-refined .usage-guide')).toBeVisible();
     await capture('guide');
     await page.goto(base + '#/compare');
-    await expect(page.locator('.ui-refined')).toHaveCount(0);
+    await expect(page.locator('.ui-refined')).toHaveCount(1);
+    await expect(page).toHaveTitle('화정동 하교 비교 · 도림통학');
+    const comparisonCenter = await page.locator('.brand').evaluate(element => {
+      const box = element.getBoundingClientRect();
+      return Math.abs(box.x + box.width / 2 - innerWidth / 2);
+    });
+    expect(comparisonCenter).toBeLessThan(1);
     const comparison = page.locator('.submission-comparison');
+    await expect(comparison).toContainText('목적지 주변 하차 정류장 찾기');
+    await expect(comparison).not.toContainText('있어요');
     await expect(comparison.getByRole('link', { name: '직접 검색해보기', exact: true })).toHaveCount(2);
     await capture('comparison');
     await comparison.getByRole('link', { name: '직접 검색해보기', exact: true }).first().click();

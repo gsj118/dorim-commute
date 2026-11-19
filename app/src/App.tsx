@@ -64,7 +64,7 @@ export default function App() {
   const params = new URLSearchParams(window.location.search);
   // Keep existing comparison links working; general screens now use this UI by default.
   const refined = params.get('ui') === 'refined';
-  const refinedScreen = ['home', 'search', 'routes', 'trip', 'sources'].includes(page.kind);
+  const refinedScreen = ['home', 'search', 'routes', 'trip', 'sources', 'compare'].includes(page.kind);
   const copy = selectUiCopy(refinedScreen);
   const experimentQuery = refined ? '?ui=refined' : '';
   const demoHref = `?demo=hwajeong${refined ? '&ui=refined' : ''}#/search`;
@@ -183,7 +183,7 @@ export default function App() {
     }
     navigationPending.current = false;
     freshHomePending.current = false;
-    document.title = refinedScreen ? `${page.kind === 'home' || page.kind === 'search' ? refinedMessages.homeTitle : page.kind === 'trip' ? '운행편 상세' : page.kind === 'sources' ? '이용 안내·자료 출처' : '노선 목록'} · 도림통학` : `${page.kind === 'compare' ? '화정동 하교 비교' : page.kind === 'asis' ? 'As-is 비교용 기준 화면' : page.kind === 'evaluation' ? '사용성 평가 도구' : page.kind === 'home' ? '나의 통학길' : page.kind === 'trip' ? '운행편 상세' : page.kind === 'sources' ? '정보와 출처' : page.kind === 'search' ? '장소로 찾기' : '노선 목록'} · 도림 통학`;
+    document.title = refinedScreen ? `${page.kind === 'compare' ? '화정동 하교 비교' : page.kind === 'home' || page.kind === 'search' ? refinedMessages.homeTitle : page.kind === 'trip' ? '운행편 상세' : page.kind === 'sources' ? '이용 안내·자료 출처' : '노선 목록'} · 도림통학` : `${page.kind === 'asis' ? 'As-is 비교용 기준 화면' : page.kind === 'evaluation' ? '사용성 평가 도구' : page.kind === 'home' ? '나의 통학길' : page.kind === 'trip' ? '운행편 상세' : page.kind === 'sources' ? '정보와 출처' : page.kind === 'search' ? '장소로 찾기' : '노선 목록'} · 도림 통학`;
   }, [page, visits, refinedScreen]);
   const navigate = (path: string) => { window.location.hash = path; };
   const brandHref = window.location.pathname + experimentQuery + '#/';
@@ -324,7 +324,7 @@ export default function App() {
     <main id="main" tabIndex={-1} className="main-content">
       {demo && page.kind !== 'evaluation' && page.kind !== 'asis' && <aside className="demo-scenario" aria-label="하교 시연 시나리오">
         <details><summary><strong>{fridayExample ? '금요일 하교 예시' : '하교 시연'}</strong> 광주 서구 화정동 {demoDestination} 가기</summary>
-          <p>도림캠퍼스에서 이 단지로 가려고 합니다. 단지명으로 검색해 하차 지점 후보를 비교하고, 학교에서 어디서 몇 시에 타는지 확인하세요.</p>
+          <p>도림캠퍼스에서 이 단지로 가려고 합니다. 목적지 주변 하차 정류장 후보를 비교하고, 학교 승차 위치와 출발 시각을 확인해 주세요.</p>
         </details>
         <a href={window.location.pathname + experimentQuery + (fridayExample ? '#/compare' : '')}>{fridayExample ? '비교 화면으로' : '시연 종료'}</a>
       </aside>}
@@ -346,7 +346,7 @@ export default function App() {
         <section className="hero"><div className="hero-copy">
           <div className="eyebrow">{fridayExample ? '도림캠퍼스 → 화정동' : '광주권 ↔ 도림캠퍼스'}</div>
           <h1 tabIndex={-1} ref={homeHeading}>{refinedScreen ? <>{refinedMessages.homeTitleLead} <span>{refinedMessages.homeTitleAction}</span></> : fridayExample ? '내가 아는 장소로 내릴 곳 찾기' : <>아는 장소로 찾는 <br/><span>나의 통학편.</span></>}</h1>
-          <p>{refinedScreen && !fridayExample ? refinedMessages.homeDescription(origin?.direction || direction) : fridayExample ? '‘장소 검색’을 누르고 결과에서 2단지 아파트를 선택하세요.' : '아파트·건물 이름으로 가까운 정류장과 시각을 확인하세요.'}</p>{page.kind === 'home' && !demo && <a className="home-comparison-link" href="#/compare">화정동 하교 예시로 두 방식 비교 <Icon name="arrow"/></a>}</div><div className="search-panel"><div className="panel-heading"><h2>{copy('어디서 통학하시나요?')}</h2></div><Conditions direction={direction} weekday={weekday} onDirection={setTravelDirection} onWeekday={setWeekday}/><PlaceSearch ref={placeForm} key={searchEpoch} visits={visits} visible={page.kind === 'home' || page.kind === 'search'} initialQuery={demo ? demoDestination : ''} direction={origin?.direction || direction} weekday={origin ? origin.weekday : weekday} onDirectionChange={setTravelDirection} onOpenTimetable={openTimetable} onSelectionChange={setSelectedPlace}/></div></section>
+          <p>{refinedScreen && !fridayExample ? refinedMessages.homeDescription(origin?.direction || direction) : fridayExample ? '‘장소 검색’을 누르고 결과에서 2단지 아파트를 선택해 주세요.' : '아파트·건물 이름으로 가까운 정류장과 시각을 확인하세요.'}</p>{page.kind === 'home' && !demo && <a className="home-comparison-link" href="#/compare">화정동 하교 예시로 두 방식 비교 <Icon name="arrow"/></a>}</div><div className="search-panel"><div className="panel-heading"><h2>{copy('어디서 통학하시나요?')}</h2></div><Conditions direction={direction} weekday={weekday} onDirection={setTravelDirection} onWeekday={setWeekday}/><PlaceSearch ref={placeForm} key={searchEpoch} visits={visits} visible={page.kind === 'home' || page.kind === 'search'} initialQuery={demo ? demoDestination : ''} direction={origin?.direction || direction} weekday={origin ? origin.weekday : weekday} onDirectionChange={setTravelDirection} onOpenTimetable={openTimetable} onSelectionChange={setSelectedPlace}/></div></section>
         {!fridayExample && <section className="home-list-section" aria-labelledby="quick-heading"><div className="section-heading"><div><h2 id="quick-heading">{copy('익숙한 노선, 바로 확인하기')}</h2><p>{copy('장소 검색 없이도 운행편과 정류장을 살펴볼 수 있어요.')}</p></div><button className="text-button" onClick={() => navigate(`/routes/${direction}`)}>노선 목록 보기 <Icon name="arrow"/></button></div><div className="quick-direction-grid">{(['toCampus', 'fromCampus'] as Direction[]).map(value => <button className={`quick-direction ${value === 'fromCampus' ? 'homeward' : ''}`} key={value} onClick={() => { setDirection(value); navigate(`/routes/${value}`); }}><span className="quick-icon"><Icon name="route"/></span><span><strong>{directionName(value)} 노선</strong><small>{value === 'toCampus' ? '광주권 승차 지점 → 도림캠퍼스' : 'MNU 스퀘어 앞 → 광주권 하차 지점'}</small><span className="mini-badge">{dataset.trips.filter(t => t.direction === value).length}편 수록</span></span><Icon name="arrow"/></button>)}</div></section>}
 
       </div>
